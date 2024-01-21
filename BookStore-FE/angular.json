@@ -62,7 +62,8 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BookStore-FE:build"
+            "buildTarget": "BookStore-FE:build"
+            
           }
         },
         "test": {
@@ -87,17 +88,17 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "your-project-name:build"
+            "buildTarget": "BookStore-FE:build"
           },
           "configurations": {
             "development": {
-              "browserTarget": "your-project-name:build:development"
+              "buildTarget": "BookStore-FE:build"
             },
             "production": {
-              "browserTarget": "your-project-name:build:production"
+              "buildTarget": "BookStore-FE:build"
             },
             "staging": {
-              "browserTarget": "your-project-name:build:staging"
+              "buildTarget": "BookStore-FE:build"
             }
           }
         }

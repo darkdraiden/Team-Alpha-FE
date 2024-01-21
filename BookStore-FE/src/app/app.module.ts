@@ -10,6 +10,7 @@ import { CardModule } from 'primeng/card';
 import  {InputTextModule} from 'primeng/inputtext'
 import {ReactiveFormsModule} from '@angular/forms'
 import { ButtonModule } from 'primeng/button';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ButtonModule } from 'primeng/button';
     CardModule,
     InputTextModule,
     ReactiveFormsModule,
-    ButtonModule
+    ButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

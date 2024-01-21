@@ -3,6 +3,8 @@ import { passwordMatchValidator } from './shared/password-Match';
 
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { User } from 'src/app/interfaces/auth';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -39,7 +41,7 @@ export class RegisterComponent {
     }
   )
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private authService : AuthService) { }
 
   get fullName() {
     return this.registerForm.controls['fullName'];
@@ -74,5 +76,17 @@ export class RegisterComponent {
     console.warn(this.registerForm.value)
   }
   
+ submitDetails(){
+  // console.log(this.registerForm.value)
+  const postData = {...this.registerForm.value};
+  delete postData.confirmPassword;
+  this.authService.registerUser(postData as User).subscribe(
+    response => {
+      console.log(response)
+    },
+    error => console.log(error)
+  )
+
+ }
   
 }
