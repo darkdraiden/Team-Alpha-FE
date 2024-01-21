@@ -12,6 +12,12 @@
       "fullName": "komal yadav",
       "email": "komal@13.com",
       "password": "Komal@1303"
+    },
+    {
+      "id": "d064",
+      "fullName": "suyash yadav",
+      "email": "sy@gmail.com",
+      "password": "Suyash@1303"
     }
   ]
 }

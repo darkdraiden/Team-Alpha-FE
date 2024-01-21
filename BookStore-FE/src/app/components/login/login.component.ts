@@ -1,6 +1,9 @@
 
 import { Component } from '@angular/core';
 import { FormBuilder, Validator, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +20,11 @@ export class LoginComponent {
     }
   )
 
-  constructor(private fb:FormBuilder){}
+  constructor(private fb:FormBuilder, 
+    private authService :AuthService,
+    private router:Router,
+    private msgService :MessageService
+    ){}
 
   get email(){
     return this.loginForm.controls['email'];
@@ -34,5 +41,24 @@ export class LoginComponent {
     } else if (controlName === 'password') {
       this.passwordPlaceholder = ''; // Optionally clear the placeholder text for password
     }
+
+   
+  }
+
+  LoginUser(){
+      const{email,password}=this.loginForm.value;
+      this.authService.loginUser(email as string).subscribe(
+        response =>{
+if(response.length>0 && response[0].password===password){
+  sessionStorage.setItem('email',email as string);
+  this.router.navigate(['/home']);
+}else{
+  this.msgService.add({ severity: 'error', summary: 'error', detail: 'wrong password or email' });
+}     },
+
+error =>{
+  this.msgService.add({ severity: 'error', summary: 'error', detail: 'API error' });
+}
+      )
   }
 }
