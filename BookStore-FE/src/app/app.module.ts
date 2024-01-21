@@ -11,6 +11,9 @@ import  {InputTextModule} from 'primeng/inputtext'
 import {ReactiveFormsModule} from '@angular/forms'
 import { ButtonModule } from 'primeng/button';
 import {HttpClientModule} from '@angular/common/http'
+import { ToastModule } from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MessageService} from 'primeng/api'
 
 @NgModule({
   declarations: [
@@ -26,9 +29,12 @@ import {HttpClientModule} from '@angular/common/http'
     InputTextModule,
     ReactiveFormsModule,
     ButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastModule,
+    BrowserAnimationsModule
+    
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

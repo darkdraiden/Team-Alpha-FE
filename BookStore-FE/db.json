@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": "1bde",
+      "fullName": "komal yadav",
+      "email": "komal@13.com",
+      "password": "Komal@1303",
+      "confirmPassword": "Komal@1303"
+    },
+    {
+      "id": "c2c7",
+      "fullName": "komal yadav",
+      "email": "komal@13.com",
+      "password": "Komal@1303"
+    }
+  ]
+}

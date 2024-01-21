@@ -3,6 +3,8 @@ import { passwordMatchValidator } from './shared/password-Match';
 
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 import { User } from 'src/app/interfaces/auth';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -41,7 +43,12 @@ export class RegisterComponent {
     }
   )
 
-  constructor(private fb: FormBuilder,private authService : AuthService) { }
+  constructor(private fb: FormBuilder,
+    private authService : AuthService, 
+    private msgService:MessageService,
+    private router:Router
+    ){}
+  //auth servivce form auth service.ts ko add kiya { }
 
   get fullName() {
     return this.registerForm.controls['fullName'];
@@ -76,15 +83,21 @@ export class RegisterComponent {
     console.warn(this.registerForm.value)
   }
   
- submitDetails(){
-  // console.log(this.registerForm.value)
-  const postData = {...this.registerForm.value};
+  submitDetails(){
+  console.log(this.registerForm.value)
+   const postData = {...this.registerForm.value};
   delete postData.confirmPassword;
   this.authService.registerUser(postData as User).subscribe(
     response => {
-      console.log(response)
+      console.log(response);
+      this.msgService.add({ severity: 'success', summary: 'Success', detail: 'Register sucess' });
+      this.router.navigate(['login'])
     },
-    error => console.log(error)
+    error => {
+      console.log(error)
+      this.msgService.add({ severity: 'error', summary: 'error', detail: 'wrong' });
+      
+    }
   )
 
  }
