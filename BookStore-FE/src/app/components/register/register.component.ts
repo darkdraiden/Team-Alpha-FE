@@ -70,5 +70,9 @@ export class RegisterComponent {
     }
   }
 
+  registerUser(){
+    console.warn(this.registerForm.value)
+  }
+  
   
 }

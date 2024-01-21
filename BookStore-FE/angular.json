@@ -59,18 +59,6 @@
           },
           "defaultConfiguration": "production"
         },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "browserTarget": "BookStore-FE:build:production"
-            },
-            "development": {
-              "browserTarget": "BookStore-FE:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
@@ -94,8 +82,28 @@
             ],
             "scripts": []
           }
+        },
+
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "your-project-name:build"
+          },
+          "configurations": {
+            "development": {
+              "browserTarget": "your-project-name:build:development"
+            },
+            "production": {
+              "browserTarget": "your-project-name:build:production"
+            },
+            "staging": {
+              "browserTarget": "your-project-name:build:staging"
+            }
+          }
         }
       }
     }
   }
+
+ 
 }
