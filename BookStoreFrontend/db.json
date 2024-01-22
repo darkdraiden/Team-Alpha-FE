@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "1bde",
+      "fullName": "komal yadav",
+      "email": "komal@13.com",
+      "password": "Komal@1303",
+      "confirmPassword": "Komal@1303"
+    },
+    {
+      "id": "c2c7",
+      "fullName": "komal yadav",
+      "email": "komal@13.com",
+      "password": "Komal@1303"
+    },
+    {
+      "id": "d064",
+      "fullName": "suyash yadav",
+      "email": "sy@gmail.com",
+      "password": "Suyash@1303"
+    },
+    {
+      "id": "2bad",
+      "fullName": "Shubham yadav",
+      "email": "shubham@gmail.com",
+      "password": "Abcd@123"
+    },
+    {
+      "id": "322e",
+      "fullName": "sourabh ch",
+      "email": "sourabh@gmail.com",
+      "password": "Abcd@123"
+    }
+  ]
+}

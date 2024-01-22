@@ -1,0 +1,40 @@
+
+
+<div class="flex justify-content-center">
+<form [formGroup]=" loginForm" (ngSubmit)="LoginUser()">
+    <p-card header="Login" [style]="{width :'500px'}">
+        <p class="m-0">
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="text" pInputText formControlName="email" class="w-full" name="email"
+                    [placeholder]="emailPlaceholder" (focus)="clearPlaceholder('email')" />            
+                 <small *ngIf="email.invalid && (email.dirty || email.touched)" 
+                 class="block p-error">
+                     <div *ngIf="email.errors?.['required']">Email is required</div>
+                     <div *ngIf="email.errors?.['email']">Email should be valid</div>
+                 </small>
+                 
+            </div>
+
+           
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" pInputText formControlName="password" class="w-full" name="password"
+                    [placeholder]="passwordPlaceholder" (focus)="clearPlaceholder('password')" />            
+                 <small *ngIf="password.invalid && (password.dirty || password.touched)" 
+            class="block p-error">
+                <div *ngIf="password.errors?.['required']">Password is required</div>
+            </small>
+
+            </div>
+            <div class="card flex justify-content-center">
+                <p-button [disabled]="loginForm.invalid" label="Submit" type="submit"></p-button>
+            </div>
+                 <div class="mt-2">
+                Not a member? <a router routerLink="/register">register here</a>
+            </div>
+
+    </p-card>
+</form>
+</div>
