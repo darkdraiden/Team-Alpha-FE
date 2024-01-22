@@ -1,0 +1,13 @@
+.row .col {
+    margin: 5px;
+  }
+  
+table{
+    margin-top: 3rem;
+    margin-left: 6rem;
+}
+ 
+
+  h3{
+    color: hsla(154, 76%, 24%, 0.761);
+  }

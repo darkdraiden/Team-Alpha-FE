@@ -15,7 +15,8 @@ import { ToastModule } from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MessageService} from 'primeng/api';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ImageCComponent } from './components/image-c/image-c.component'
+import { ImageCComponent } from './components/image-c/image-c.component';
+import { BookIconsComponent } from './Components/book-icons/book-icons.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ImageCComponent } from './components/image-c/image-c.component'
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    ImageCComponent
+    ImageCComponent,
+    BookIconsComponent
   ],
   imports: [
     BrowserModule,
