@@ -11,3 +11,25 @@ table{
   h3{
     color: hsla(154, 76%, 24%, 0.761);
   }
+
+
+.line-container {
+    position: relative;
+    width: 82rem; 
+    height: 1px; 
+    background-color: #000; 
+    margin-left: 3.5rem;
+    margin-right: 3rem;
+  }
+  
+  .line-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60rem;
+    height: 1px; 
+    background-color: #000; 
+    transform: translateY(-50%);
+  }
+  
