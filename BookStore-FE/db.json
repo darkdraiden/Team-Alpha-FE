@@ -18,6 +18,18 @@
       "fullName": "suyash yadav",
       "email": "sy@gmail.com",
       "password": "Suyash@1303"
+    },
+    {
+      "id": "2bad",
+      "fullName": "Shubham yadav",
+      "email": "shubham@gmail.com",
+      "password": "Abcd@123"
+    },
+    {
+      "id": "322e",
+      "fullName": "sourabh ch",
+      "email": "sourabh@gmail.com",
+      "password": "Abcd@123"
     }
   ]
 }

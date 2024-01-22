@@ -22,7 +22,6 @@ export class AuthService {
 
   loginUser(email:string): Observable<User[]> {
     return this.http.get<User[]>(`${this.apiUrl}/users?email=${email}`);
-    this.isAuthenticated = true;
   }
 
   
