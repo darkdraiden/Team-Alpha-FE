@@ -1,0 +1,18 @@
+
+<div class="topnav">
+  <a routerLink="home" class="left">
+    <img src="../../../assets/images/icon.png" alt="ll" class="no-margin-padding custom-image" />
+  </a>
+  
+  <a routerLink="" class="right">Contact Us</a>
+  <a *ngIf="isLogout" routerLink="" class="right">User</a>
+  <a *ngIf="isLogout" routerLink="" class="right">Cart</a>
+  <a routerLink="login" class="right">Login</a>
+  <a routerLink="home" class="right">Home</a>
+</div>
+<app-image-carousel></app-image-carousel>
+  <router-outlet></router-outlet>
+ 
+<p>home works!</p>
+<!-- <p-button label="Sign Out" (onClick)="logOut()"></p-button> -->
+         
