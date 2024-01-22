@@ -13,7 +13,8 @@ import { ButtonModule } from 'primeng/button';
 import {HttpClientModule} from '@angular/common/http'
 import { ToastModule } from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MessageService} from 'primeng/api'
+import {MessageService} from 'primeng/api';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MessageService} from 'primeng/api'
     ButtonModule,
     HttpClientModule,
     ToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
     
   ],
   providers: [MessageService],
