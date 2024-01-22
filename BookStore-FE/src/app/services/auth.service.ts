@@ -7,7 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
+  private isAuthenticated = false;
+  isLoggedIn(): boolean {
+    return this.isAuthenticated;
+  }
 
+  
   private apiUrl='http://localhost:3000'
   constructor(private http : HttpClient) { }
 
@@ -17,7 +22,10 @@ export class AuthService {
 
   loginUser(email:string): Observable<User[]> {
     return this.http.get<User[]>(`${this.apiUrl}/users?email=${email}`);
+    this.isAuthenticated = true;
   }
+
+  
 }
 
 
