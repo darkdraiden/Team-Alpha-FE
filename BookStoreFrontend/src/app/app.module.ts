@@ -14,14 +14,16 @@ import {HttpClientModule} from '@angular/common/http'
 import { ToastModule } from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MessageService} from 'primeng/api';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ImageCComponent } from './components/image-c/image-c.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    ImageCComponent
   ],
   imports: [
     BrowserModule,
