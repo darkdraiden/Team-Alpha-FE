@@ -17,6 +17,7 @@ import {MessageService} from 'primeng/api';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ImageCComponent } from './components/image-c/image-c.component';
 import { BookIconsComponent } from './components/book-icons/book-icons.component';
+import { BookGridComponent } from './components/book-grid/book-grid.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { BookIconsComponent } from './components/book-icons/book-icons.component
     RegisterComponent,
     HomeComponent,
     ImageCComponent,
-    BookIconsComponent
+    BookIconsComponent,
+    BookGridComponent
   ],
   imports: [
     BrowserModule,

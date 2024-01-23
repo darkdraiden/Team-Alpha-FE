@@ -1,0 +1,18 @@
+
+   <table class="table-container">
+    <tr>
+      <td *ngFor="let book of books">
+        <div class="image-card">
+          <img [src]="book.imageSrc" alt="Avatar" class="table-image">
+          <div class="table-overlay">
+            <div class="table-text">View</div>
+          </div>
+          <div class="author-text">{{ book.name }} <br> {{ book.author}}</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+
+  <div class="line-container"></div>
+  
