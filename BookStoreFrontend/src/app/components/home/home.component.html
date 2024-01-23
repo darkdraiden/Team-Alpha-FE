@@ -1,21 +1,20 @@
-
 <div class="topnav">
   <img src="../../../assets/Lost Library Logo.png" alt="Logo" class="logo">
-    <a class="active" routerLink="home"><b>Contact us</b></a>
-    <a routerLink="register"><b>Sign Up</b></a>
-    <a routerLink="login"><b>Login</b></a>
-    <a routerLink="home"><b>Home</b></a>
+  <div class="dropdown" *ngIf="authService.isLoggedIn">
+    <button class="dropbtn"><b>User </b><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+    </svg></button>
+    <div class="dropdown-content">
+      <a (click)="logout()">Log Out</a>
+      <a routerLink="order-history">Order History</a>
+      <a routerLink="cart">View Cart</a>
+      <a routerLink="view-profile">View Profile</a>
+    </div>
   </div>
-  <div>
-    <app-image-c></app-image-c> 
-  </div>
-  <div>
-    <app-book-icons></app-book-icons>
-  </div>
- 
-  <router-outlet></router-outlet>
+    
+<a><b>Contact</b></a>
+  <a *ngIf="!authService.isLoggedIn" routerLink="register"><b>Sign Up</b></a>
+  <a routerLink="home"><b>Home</b></a>
+</div>
 
-
-
-
-  
+<router-outlet></router-outlet>

@@ -1,0 +1,10 @@
+button{
+    background-color: hsla(154, 76%, 24%, 0.761);
+    color: #EEEEEE;
+    height:3rem;
+    font-size: larger;
+}
+
+form{
+    margin-top: 3rem;
+}

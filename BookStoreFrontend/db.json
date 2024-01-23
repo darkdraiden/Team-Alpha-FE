@@ -30,6 +30,12 @@
       "fullName": "sourabh ch",
       "email": "sourabh@gmail.com",
       "password": "Abcd@123"
+    },
+    {
+      "id": "477a",
+      "fullName": "yashraj bh",
+      "email": "yashraj@13.com",
+      "password": "Abcd@123"
     }
   ]
 }

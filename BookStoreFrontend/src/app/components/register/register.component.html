@@ -49,7 +49,8 @@
           </div>
   
           <div class="card flex justify-content-center">
-            <p-button [disabled]="!registerForm.valid" label="Submit" type="submit"></p-button>
+            <button [disabled]="!registerForm.valid" label="Submit" type="submit">Register</button>
+            <!-- <p-button [disabled]="!registerForm.valid" label="Submit" type="submit"></p-button> -->
           </div>
           <div class="mt-2">
             Already a member? <a routerLink="/login">login</a>
