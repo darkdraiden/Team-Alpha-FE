@@ -1,3 +1,5 @@
+
+
 <div class="flex justify-content-center">
     <form [formGroup]="registerForm" (ngSubmit)="submitDetails()">
       <p-card header="Register" [style]="{width :'500px'}">
@@ -48,7 +50,7 @@
             </small>
           </div>
   
-          <div class="card flex justify-content-center">
+          <div class="justify-content-center">
             <button [disabled]="!registerForm.valid" label="Submit" type="submit">Register</button>
             <!-- <p-button [disabled]="!registerForm.valid" label="Submit" type="submit"></p-button> -->
           </div>
