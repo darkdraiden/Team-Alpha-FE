@@ -36,6 +36,20 @@
       "fullName": "yashraj bh",
       "email": "yashraj@13.com",
       "password": "Abcd@123"
+    },
+    {
+      "id": "04b0",
+      "fullName": "ajay yadav",
+      "email": "ajay@13.com",
+      "password": "Komal@1303",
+      "phone": "9826082606"
+    },
+    {
+      "id": "d1de",
+      "name": "aman yadav",
+      "email": "aman@13.com",
+      "password": "Komal@1303",
+      "phone": "9826082606"
     }
   ]
 }

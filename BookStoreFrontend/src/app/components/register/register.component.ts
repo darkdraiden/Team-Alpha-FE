@@ -15,15 +15,17 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class RegisterComponent {
 
-  fullNamePlaceholder = 'Enter your Name';
+  namePlaceholder = 'Enter your Name';
   emailPlaceholder = 'Enter your Email';
   passwordPlaceholder = 'Enter Password';
   confirmPasswordPlaceholder = 'Confirm Password';
+  phonePlaceholder = 'Enter your Phone Number';
+ 
 
   passwordConditions: string[] = [];
 
   registerForm = this.fb.group({
-    fullName: ['', [
+    name: ['', [
       Validators.required,
       Validators.pattern(/^[a-zA-Z]+ [a-zA-Z]+$/),
     ]],
@@ -36,7 +38,11 @@ export class RegisterComponent {
       Validators.minLength(8),
       Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+={}|\[\]\\';:"<>,./?])[\w!@#$%^&*()_+={}|\[\]\\';:"<>,./?]{8,}$/),
     ]],
-    confirmPassword: ['', Validators.required]
+    confirmPassword: ['', Validators.required],
+    phone: ['', [
+      Validators.required,
+      Validators.pattern(/^\d{10}$/),
+    ]],
   },
     {
       validators: passwordMatchValidator
@@ -51,7 +57,7 @@ export class RegisterComponent {
   //auth servivce form auth service.ts ko add kiya { }
 
   get fullName() {
-    return this.registerForm.controls['fullName'];
+    return this.registerForm.controls['name'];
   }
 
   get email() {
@@ -66,9 +72,14 @@ export class RegisterComponent {
     return this.registerForm.controls['confirmPassword'];
   }
 
+  get phoneNumber(){
+    return this.registerForm.controls['phone'];
+  }
+ 
+
   clearPlaceholder(controlName: string): void {
-    if (controlName === 'fullName') {
-      this.fullNamePlaceholder = '';
+    if (controlName === 'name') {
+      this.namePlaceholder = '';
     } else if (controlName === 'email') {
       this.emailPlaceholder = '';
     } else if (controlName === 'password') {
@@ -76,6 +87,9 @@ export class RegisterComponent {
     }
      else if (controlName === 'confirmPassword') {
       this.confirmPasswordPlaceholder = '';
+    }
+    else if (controlName==='phone'){
+      this.phonePlaceholder='';
     }
   }
 

@@ -4,16 +4,17 @@
     <form [formGroup]="registerForm" (ngSubmit)="submitDetails()">
       <p-card header="Register" [style]="{width :'500px'}">
         <p class="m-0">
+
           <div class="field">
-            <label for="fullName">Full Name</label>
-            <input type="text" pInputText formControlName="fullName" class="w-full" name="fullName"
-              [placeholder]="fullNamePlaceholder" (focus)="clearPlaceholder('fullName')" />
-            <small *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="block p-error">
-              <div *ngIf="fullName.errors?.['required']">Name is required</div>
-              <div *ngIf="fullName.errors?.['pattern']">Enter a valid name</div>
+            <label for="name">Full Name</label>
+            <input type="text" pInputText formControlName="name" class="w-full" name="name"
+              [placeholder]="namePlaceholder" (focus)="clearPlaceholder('name')" />
+            <small *ngIf="registerForm.get('name')?.invalid && (registerForm.get('name')?.dirty || registerForm.get('name')?.touched)" class="block p-error">
+              <div *ngIf="registerForm.get('name')?.errors?.['required']">Name is required</div>
+              <div *ngIf="registerForm.get('name')?.errors?.['pattern']">Enter a valid name</div>
             </small>
           </div>
-  
+
           <div class="field">
             <label for="email">Email</label>
             <input type="email" pInputText formControlName="email" class="w-full" name="email"
@@ -24,6 +25,26 @@
             </small>
           </div>
   
+   
+
+<!-- ... (existing fields) -->
+
+<div class="field">
+  <label for="phone">Phone Number</label>
+  <input type="text" pInputText formControlName="phone" class="w-full" name="phone"
+      [placeholder]="phonePlaceholder" (focus)="clearPlaceholder('phone')" />
+  <small *ngIf="registerForm.get('phone')?.invalid && (registerForm.get('phone')?.dirty || registerForm.get('phone')?.touched)" class="block p-error">
+      <div *ngIf="registerForm.get('phone')?.errors?.['required']">Phone number is required</div>
+      <div *ngIf="registerForm.get('phone')?.errors?.['pattern']">Enter a valid phone number</div>
+  </small>
+</div>
+
+<!-- ... (existing fields) -->
+
+
+
+
+
           <div class="field">
             <label for="password">Password</label>
             <input type="password" pInputText formControlName="password" class="w-full" name="password"

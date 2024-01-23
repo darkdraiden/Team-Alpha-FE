@@ -29,23 +29,6 @@
   margin-right: 20px;
 }
 
-.search-bar {
-  flex-grow: 0;
-  margin: auto 0;
-  display: flex;
-  width: 50rem;
-  border: 2px solid rgb(176, 201, 193);
-  border-radius: 5rem;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: none;  
-  outline: none; 
-  border-radius: 5rem;
-}
 
 .topnav a {
   float: right;
@@ -117,18 +100,22 @@ height: 5rem;
   flex-grow: 0;
   margin: auto 0;
   display: flex;
-  width: 50rem;
+  width: 40rem;
   position: relative;
-  border-radius: 5px;
+  border: 2px solid rgb(176, 201, 193);
+  border-radius: .5rem;
+
 }
 
 .search-bar input {
-  width: calc(100% - 40px); /* Adjusted width to accommodate the icon */
+  width: calc(100% - 40px); 
   padding: 10px;
   font-size: 16px;
-  border-color: rgb(13, 137, 95);
-  border-radius: 5px;
+  border: none;  
+  outline: none; 
+  border-radius: .5rem;
 }
+
 
 .search-icon {
   width: 20px;
