@@ -9,14 +9,17 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  images = [700, 533, 807, 124].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  isDropdownOpen: boolean = false; 
+  
   constructor(private router :Router,
-  private authService :AuthService){}
-  logOut(){
-    sessionStorage.clear();
-    this.router.navigate(['login'])
+  public authService :AuthService){}
+  
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
   }
-  isLoggedIn(): boolean {
-    return this.authService.isLoggedIn();
+
+  logout(): void {
+    this.authService.LogoutUser();
   }
+ 
 }

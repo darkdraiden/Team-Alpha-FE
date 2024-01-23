@@ -16,7 +16,7 @@ export class LoginComponent {
   loginForm = this.fb.group(
     {
       email:['',[Validators.required,Validators.email]],
-      password:['',Validators.required]//validator.pattern to add extra pattern
+      password:['',Validators.required]
     }
   )
 
@@ -37,9 +37,9 @@ export class LoginComponent {
   clearPlaceholder(controlName: string): void {
 
     if (controlName === 'email') {
-      this.emailPlaceholder = ''; // Optionally clear the placeholder text for email
+      this.emailPlaceholder = ''; 
     } else if (controlName === 'password') {
-      this.passwordPlaceholder = ''; // Optionally clear the placeholder text for password
+      this.passwordPlaceholder = ''; 
     }
 
    
