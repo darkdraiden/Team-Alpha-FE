@@ -8,7 +8,13 @@
   
   <a routerLink="home"><b>Home</b></a>
 <a><b>Contact</b></a>
-  <a *ngIf="!authService.isLoggedIn" routerLink="register"><b>Sign Up</b></a>
+  <a *ngIf="!authService.isLoggedIn" (click)="showDialog()"><b>Sign Up</b></a>
+    <p-dialog header="Register" [(visible)]="visible" [style]="{width: '40vw',height: '50vw'}">
+      <p>
+      <app-register></app-register>
+      </p>
+  </p-dialog>
+  
 
 
   <div class="dropdown" *ngIf="authService.isLoggedIn">

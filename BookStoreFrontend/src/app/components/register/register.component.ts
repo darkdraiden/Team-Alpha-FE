@@ -115,5 +115,12 @@ export class RegisterComponent {
   )
 
  }
+
+ loginVisible: boolean = false;
+
+  showLoginDialog() {
+    this.loginVisible = true;
+  }
+
   
 }
