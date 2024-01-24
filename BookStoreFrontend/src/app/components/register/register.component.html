@@ -71,10 +71,11 @@
           </div>
           <div class="mt-2">
             Already a member? <a (click)="showLoginDialog()">login</a>
+            <p-dialog header="Login" [(visible)]="loginVisible" [style]="{ width: '40vw', height: '45vw' }" > 
+              <app-login></app-login> 
+              </p-dialog>
           </div>
-          <!-- <p-dialog header="Login" [(visible)]="loginVisible" [style]="{ width: '40vw', height: '45vw' }">
-          <app-login></app-login> 
-          </p-dialog> -->
+         
         </p-card>
       </form>
     </div>

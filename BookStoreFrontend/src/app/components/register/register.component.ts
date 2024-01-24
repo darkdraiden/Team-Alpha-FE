@@ -105,7 +105,7 @@ export class RegisterComponent {
     response => {
       console.log(response);
       this.msgService.add({ severity: 'success', summary: 'Success', detail: 'Register sucess' });
-      this.router.navigate(['login'])
+      this.router.navigate(['home'])
     },
     error => {
       console.log(error)

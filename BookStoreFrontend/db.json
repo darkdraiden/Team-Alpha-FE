@@ -57,6 +57,27 @@
       "email": "ash@gmail.com",
       "password": "Komal@1303",
       "phone": "9826082606"
+    },
+    {
+      "id": "a2cc",
+      "name": "xyz efg",
+      "email": "x@gmail.com",
+      "password": "Komal@1303",
+      "phone": "1234567890"
+    },
+    {
+      "id": "cc2d",
+      "name": "team alpha",
+      "email": "alphateam@gmail.com",
+      "password": "Komal@1303",
+      "phone": "9826082606"
+    },
+    {
+      "id": "ca02",
+      "name": "alpha team",
+      "email": "teamalpha@gmail.com",
+      "password": "Komal@1303",
+      "phone": "9826082606"
     }
   ]
 }
