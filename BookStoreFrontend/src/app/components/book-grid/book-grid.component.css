@@ -49,13 +49,13 @@
     padding: 16px 32px;
     border-radius: 1rem;
     width: 10rem;
-    margin-left: 4rem;
-    opacity: 0; /* Initially hidden */
+    margin-left: 1rem;
+    opacity: 0; 
     transition: opacity 0.5s ease;
   }
   
   .image-card:hover .table-text {
-    opacity: 1; /* Display when image-card is hovered */
+    opacity: 1; 
   }
   
   
