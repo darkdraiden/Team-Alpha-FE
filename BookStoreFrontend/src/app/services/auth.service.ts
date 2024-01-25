@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from '../interfaces/auth';
+import { User, loginUser } from '../interfaces/auth';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -11,17 +11,18 @@ export class AuthService {
 
   isLoggedIn: boolean = false;
   
-  private apiUrl='http://localhost:3000'
+  private apiUrl='http://localhost:8080/api/v1'
   constructor(private http : HttpClient,
     private router :Router ) { }
 
   registerUser(user: User): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/users`, user);
+    return this.http.post<any>(`${this.apiUrl}/user`, user);
   }
 
-  loginUser(email:string): Observable<User[]> {
+  loginUser(user: loginUser): Observable<any> {
     this.isLoggedIn=true;
-    return this.http.get<User[]>(`${this.apiUrl}/users?email=${email}`);
+    
+    return this.http.post<any>(`${this.apiUrl}/user/login`,user);
   }
 
   LogoutUser(){
