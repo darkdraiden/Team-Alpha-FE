@@ -5,8 +5,12 @@
         <div class="image-card">
           <img [src]="book.imageSrc" alt="Avatar" class="table-image">
           <div class="table-overlay">
-            <div class="table-text">View</div>
-          </div>
+            <button class="table-text" (click)="showDialog()" >Add to cart </button></div>
+            <p-dialog header="Login to Add to cart" [(visible)]="visible" [style]="{width: '40vw', height:'40vw'}">
+              <p>
+              <app-login></app-login> 
+              </p>
+          </p-dialog>
           <div class="author-text">{{ book.name }} <br> {{ book.author}}</div>
         </div>
       </td>

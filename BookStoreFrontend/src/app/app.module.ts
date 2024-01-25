@@ -18,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ImageCComponent } from './components/image-c/image-c.component';
 import { BookIconsComponent } from './components/book-icons/book-icons.component';
 import { BookGridComponent } from './components/book-grid/book-grid.component';
+import { DialogModule } from 'primeng/dialog';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { BookGridComponent } from './components/book-grid/book-grid.component';
     HttpClientModule,
     ToastModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    DialogModule
     
   ],
   providers: [MessageService],

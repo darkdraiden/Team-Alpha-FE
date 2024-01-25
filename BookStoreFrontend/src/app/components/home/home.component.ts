@@ -21,5 +21,11 @@ export class HomeComponent {
   logout(): void {
     this.authService.LogoutUser();
   }
+
+  visible: boolean = false;
+
+  showDialog() {
+      this.visible = true;
+  }
  
 }

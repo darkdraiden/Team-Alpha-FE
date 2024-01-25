@@ -57,6 +57,41 @@
       "email": "ash@gmail.com",
       "password": "Komal@1303",
       "phone": "9826082606"
+    },
+    {
+      "id": "a2cc",
+      "name": "xyz efg",
+      "email": "x@gmail.com",
+      "password": "Komal@1303",
+      "phone": "1234567890"
+    },
+    {
+      "id": "cc2d",
+      "name": "team alpha",
+      "email": "alphateam@gmail.com",
+      "password": "Komal@1303",
+      "phone": "9826082606"
+    },
+    {
+      "id": "ca02",
+      "name": "alpha team",
+      "email": "teamalpha@gmail.com",
+      "password": "Komal@1303",
+      "phone": "9826082606"
+    },
+    {
+      "id": "65bc",
+      "name": "ii iii",
+      "email": "j@13.com",
+      "password": "Komal@1303",
+      "phone": "1234567890"
+    },
+    {
+      "id": "6b84",
+      "name": "jjj jjjj",
+      "email": "kom@13.com",
+      "password": "Komal@1303",
+      "phone": "1234567890"
     }
   ]
 }
