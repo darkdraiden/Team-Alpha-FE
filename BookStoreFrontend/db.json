@@ -78,6 +78,20 @@
       "email": "teamalpha@gmail.com",
       "password": "Komal@1303",
       "phone": "9826082606"
+    },
+    {
+      "id": "65bc",
+      "name": "ii iii",
+      "email": "j@13.com",
+      "password": "Komal@1303",
+      "phone": "1234567890"
+    },
+    {
+      "id": "6b84",
+      "name": "jjj jjjj",
+      "email": "kom@13.com",
+      "password": "Komal@1303",
+      "phone": "1234567890"
     }
   ]
 }
