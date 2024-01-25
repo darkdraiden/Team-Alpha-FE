@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
+import { User, loginUser } from 'src/app/interfaces/auth';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -46,19 +47,21 @@ export class LoginComponent {
   }
 
   LoginUser(){
-      const{email,password}=this.loginForm.value;
-      this.authService.loginUser(email as string).subscribe(
+      const currUser={...this.loginForm.value};
+      this.authService.loginUser(currUser as loginUser).subscribe(
         response =>{
-if(response.length>0 && response[0].password===password){
-  sessionStorage.setItem('email',email as string);
-  this.router.navigate(['/home']);
-}else{
-  this.msgService.add({ severity: 'error', summary: 'error', detail: 'wrong password or email' });
-}     },
+          console.log(response);
+          if(response.statusCode == 200){
 
-error =>{
-  this.msgService.add({ severity: 'error', summary: 'error', detail: 'API error' });
-}
+          sessionStorage.setItem('email',currUser.email as string);
+          this.router.navigate(['/home']);
+          }else{
+            this.msgService.add({ severity: 'error', summary: 'error', detail: 'wrong password or email' });
+          }     
+        },
+        error =>{
+          this.msgService.add({ severity: 'error', summary: 'error', detail: 'API error' });
+        }
       )
   }
 }

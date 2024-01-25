@@ -6,3 +6,8 @@ export interface User {
     phoneNumber:number,
     password:string
 }
+
+export interface loginUser{
+    email:string,
+    password:string
+}

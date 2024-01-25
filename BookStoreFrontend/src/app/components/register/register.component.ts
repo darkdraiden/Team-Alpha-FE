@@ -110,7 +110,7 @@ export class RegisterComponent {
     error => {
       console.log(error)
       this.msgService.add({ severity: 'error', summary: 'error', detail: 'wrong' });
-      
+
     }
   )
 
