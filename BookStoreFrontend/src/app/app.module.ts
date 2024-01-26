@@ -24,6 +24,7 @@ import { DataViewModule } from 'primeng/dataview';
 import { FiltersComponent } from './components/filters/filters.component';
 import {RatingModule } from 'primeng/rating';
 import { CheckboxModule } from 'primeng/checkbox';
+import { BuyNowPageComponent } from './components/buy-now-page/buy-now-page.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { CheckboxModule } from 'primeng/checkbox';
     BookGridComponent,
     VeiwAllComponent,
     FiltersComponent,
+    BuyNowPageComponent,
 
   ],
   imports: [
