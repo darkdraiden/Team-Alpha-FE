@@ -15,7 +15,5 @@ export class VeiwAllComponent {
     { id: 5, title: 'Book Title 5', author: 'Author Name 5', image: '../../../assets/img_c1.webp', price: 22, rating: 4.7 },
     { id: 6, title: 'Book Title 6', author: 'Author Name 6', image: '../../../assets/img_c1.webp', price: 28, rating: 3.5 }
   ];
-  onRateChange(event: any, book: any) {
-    book.rating = event.value;
-  }  
+  
 }

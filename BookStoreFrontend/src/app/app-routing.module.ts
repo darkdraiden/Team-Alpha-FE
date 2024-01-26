@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { VeiwAllComponent } from './components/veiw-all/veiw-all.component';
+import { BuyNowPageComponent } from './components/buy-now-page/buy-now-page.component';
 
 
 
@@ -34,7 +35,11 @@ const routes : Routes=[
     component:VeiwAllComponent
   },
   
-  
+  {
+    path:'buynow',
+    component:BuyNowPageComponent
+
+  },
 
   {
     path:'**',
