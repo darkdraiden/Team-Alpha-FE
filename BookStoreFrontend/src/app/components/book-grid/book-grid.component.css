@@ -98,7 +98,6 @@
     background-color: rgb(20, 105, 64);
   }
 
-  .h6{
+ .arrow-container a{
   color: rgb(20, 105, 64);
-  font-style: italic;
-  }
+ }
