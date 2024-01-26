@@ -22,8 +22,7 @@ import { DialogModule } from 'primeng/dialog';
 import { VeiwAllComponent } from './components/veiw-all/veiw-all.component';
 import { DataViewModule } from 'primeng/dataview';
 import { FiltersComponent } from './components/filters/filters.component';
-
-
+import {RatingModule } from 'primeng/rating'
 
 @NgModule({
   declarations: [
@@ -49,7 +48,8 @@ import { FiltersComponent } from './components/filters/filters.component';
     BrowserAnimationsModule,
     NgbModule,
     DialogModule,
-    DataViewModule
+    DataViewModule,
+    RatingModule
     
   ],
   providers: [MessageService],

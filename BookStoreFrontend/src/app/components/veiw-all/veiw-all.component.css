@@ -55,8 +55,19 @@
     background-color: #0a411d;
 }
 
-.star-icon {
-    color: #ffd700; /* Gold color for stars */
-    font-size: 24px;
-    margin-top: 5px;
+.image-container {
+    position: relative;
+    display: inline-block; /* Ensures the container takes the size of the image */
+}
+
+.image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    position: absolute;
+    margin-top: 0;
+    z-index: 1; 
 }
