@@ -4,9 +4,9 @@ button {
     height: 3rem;
     font-size: larger;
     border-radius: 2rem;
-    width: 20rem;
+    width: 18rem;
     box-shadow: none;
-    margin-left: 4.5rem; 
+    margin-left: 4rem; 
 }
 
 form{

@@ -1,8 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-@import "primeicons/primeicons.css";
 
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-boxs;
-  } */
+@import "primeicons/primeicons.css";
+@import url("primeng/resources/themes/lara-dark-teal/theme.css");
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

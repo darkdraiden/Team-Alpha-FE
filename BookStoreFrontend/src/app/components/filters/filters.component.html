@@ -1,0 +1,13 @@
+<div class="outer-filters-container">
+    <h4>Add Filters</h4>
+<div class="filter-container" *ngFor="let filter of filters">
+    <h3>{{ filter.category }}</h3>
+    <div class="checkbox-container" *ngFor="let option of filter.options">
+      <label>
+        <input type="checkbox" (change)="onCheckboxChange(filter.category, option)">
+        <span>{{ option }}</span>
+      </label>
+    </div>
+  </div>
+</div>
+

@@ -1,6 +1,5 @@
 <div class="register-container">
     <form [formGroup]="registerForm" (ngSubmit)="submitDetails()">
-      <p-card [style]="{width :'40vw',height:'45vw'}">
         <p class="m-0">
 
           <div class="field">
@@ -70,13 +69,13 @@
             <!-- <p-button [disabled]="!registerForm.valid" label="Submit" type="submit"></p-button> -->
           </div>
           <div class="mt-2">
-            Already a member? <a (click)="showLoginDialog()">login</a>
-            <p-dialog header="Login" [(visible)]="loginVisible" [style]="{ width: '40vw', height: '45vw' }" > 
+            Already a member? <a routerLink="/login">login</a>
+            <!-- <p-dialog header="Login" [(visible)]="loginVisible" [style]="{ width: '40vw', height: '45vw' }" > 
               <app-login></app-login> 
-              </p-dialog>
+              </p-dialog> -->
           </div>
          
-        </p-card>
+  
       </form>
     </div>
   

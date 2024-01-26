@@ -19,6 +19,11 @@ import { ImageCComponent } from './components/image-c/image-c.component';
 import { BookIconsComponent } from './components/book-icons/book-icons.component';
 import { BookGridComponent } from './components/book-grid/book-grid.component';
 import { DialogModule } from 'primeng/dialog';
+import { VeiwAllComponent } from './components/veiw-all/veiw-all.component';
+import { DataViewModule } from 'primeng/dataview';
+import { FiltersComponent } from './components/filters/filters.component';
+import {RatingModule } from 'primeng/rating';
+import { CheckboxModule } from 'primeng/checkbox';
 
 
 @NgModule({
@@ -29,7 +34,10 @@ import { DialogModule } from 'primeng/dialog';
     HomeComponent,
     ImageCComponent,
     BookIconsComponent,
-    BookGridComponent
+    BookGridComponent,
+    VeiwAllComponent,
+    FiltersComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,10 @@ import { DialogModule } from 'primeng/dialog';
     ToastModule,
     BrowserAnimationsModule,
     NgbModule,
-    DialogModule
+    DialogModule,
+    DataViewModule,
+    RatingModule,
+CheckboxModule
     
   ],
   providers: [MessageService],

@@ -9,7 +9,7 @@
   <a routerLink="home"><b>Home</b></a>
 <a><b>Contact Us</b></a>
   <a *ngIf="!authService.isLoggedIn" (click)="showDialog()"><b>Sign Up</b></a>
-    <p-dialog header="Register" [(visible)]="visible" [style]="{width: '40vw',height: '50vw'}" [dismissableMask]="true">
+    <p-dialog header="Register" [modal]="true" [(visible)]="visible" [style]="{width: '40vw',height: '47vw'}" [dismissableMask]="true">
       <p>
       <app-register></app-register>
       </p>

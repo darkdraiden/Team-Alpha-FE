@@ -74,7 +74,7 @@
     background-color: #000; 
     margin-left: 3.5rem;
     margin-right: 3rem;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
   }
   
   .line-container::before {
@@ -88,4 +88,16 @@
     transform: translateY(-50%);
   }
   
-  
+  .arrow-container {
+    position: relative;
+    float: right; 
+    margin-top: 2rem; 
+    margin-right: 5rem;
+  }
+  .p-button{
+    background-color: rgb(20, 105, 64);
+  }
+
+ .arrow-container a{
+  color: rgb(20, 105, 64);
+ }
