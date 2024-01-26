@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="left-column">
+     <app-filters></app-filters>
+    </div>
+    <div class="right-column">
+       
+        <div class="book-container">   
+            <div class="book" *ngFor="let book of books">
+                <img [src]="book.image" [alt]="book.title">
+                <h4>{{ book.title }}</h4>
+                <h5>By {{ book.author }}</h5>
+                <p>Price: ${{ book.price }}</p>
+                <mat-icon *ngFor="let _ of [1, 2, 3, 4, 5]" class="star-icon">star</mat-icon>
+                <div class="button-container">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

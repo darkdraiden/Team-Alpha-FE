@@ -1,0 +1,53 @@
+.filters-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 2.75rem;
+}
+
+.filter-box{
+margin-top: 2rem;
+}
+.filters-container h2 {
+    margin-bottom: 10px;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filter-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.filter-checkbox input[type="checkbox"] + label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Style the custom checkbox */
+.filter-checkbox input[type="checkbox"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid hsla(154, 76%, 24%, 0.761); /* Light green color */
+    border-radius: 3px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+/* Change the background color of the custom checkbox when checked */
+.filter-checkbox input[type="checkbox"]:checked + label::before {
+    background-color: #0b502d; /* Dark green color */
+}
+
+.heading{
+    margin-top: 1.5rem;
+}
+
+.filter-subbox{
+    margin-top: 1rem;
+}
