@@ -23,6 +23,7 @@ import { VeiwAllComponent } from './components/veiw-all/veiw-all.component';
 import { DataViewModule } from 'primeng/dataview';
 import { FiltersComponent } from './components/filters/filters.component';
 import {RatingModule } from 'primeng/rating';
+import { CheckboxModule } from 'primeng/checkbox';
 
 
 @NgModule({
@@ -52,7 +53,7 @@ import {RatingModule } from 'primeng/rating';
     DialogModule,
     DataViewModule,
     RatingModule,
-
+CheckboxModule
     
   ],
   providers: [MessageService],

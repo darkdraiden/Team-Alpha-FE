@@ -1,69 +1,13 @@
-<div class="filters-container">
-    <h3 >Filters</h3>
-    <div class="filter-box">
-    <div class="filter-checkbox">
-        <input type="checkbox" id="genre">
-        <label for="genre">  Hot Deals</label>
+<div class="outer-filters-container">
+    <h4>Add Filters</h4>
+<div class="filter-container" *ngFor="let filter of filters">
+    <h3>{{ filter.category }}</h3>
+    <div class="checkbox-container" *ngFor="let option of filter.options">
+      <label>
+        <input type="checkbox" (change)="onCheckboxChange(filter.category, option)">
+        <span>{{ option }}</span>
+      </label>
     </div>
-    <div class="filter-checkbox">
-        <input type="checkbox" id="top-rated">
-        <label for="top-rated">  Top Rated</label>
-    </div>
-    <div class="filter-checkbox">
-        <input type="checkbox" id="best-seller">
-        <label for="best-seller">  Best Seller</label>
-    </div>
-    <div class="filter-checkbox">
-        <input type="checkbox" id="new-arrivals">
-        <label for="new-arrivals">  New Arrivals</label>
-    </div>
-    </div>
-
-    <h3 class="heading">Genre</h3>
-    <div class="filter-subbox">
-        <div class="filter-checkbox">
-            <input type="checkbox" id="genre">
-            <label for="genre">  Fantasy</label>
-        </div>
-        <div class="filter-checkbox">
-            <input type="checkbox" id="top-rated">
-            <label for="top-rated">  Science Fiction</label>
-        </div>
-        <div class="filter-checkbox">
-            <input type="checkbox" id="best-seller">
-            <label for="best-seller">  Adventure</label>
-        </div>
-        <div class="filter-checkbox">
-            <input type="checkbox" id="new-arrivals">
-            <label for="new-arrivals">  Romance</label>
-        </div>
-        <div class="filter-checkbox">
-            <input type="checkbox" id="new-arrivals">
-            <label for="new-arrivals">  Mystry</label>
-        </div>
-        <div class="filter-checkbox">
-            <input type="checkbox" id="new-arrivals">
-            <label for="new-arrivals">  Horror</label>
-        </div>
-        <div class="filter-checkbox">
-            <input type="checkbox" id="new-arrivals">
-            <label for="new-arrivals">  Thriller</label>
-        </div>
-        <div class="filter-checkbox">
-            <input type="checkbox" id="new-arrivals">
-            <label for="new-arrivals">  Motivational</label>
-        </div>
-        </div>
-
-        <h3 class="heading">Price</h3>
-        <div class="filter-subbox">
-            <div class="filter-checkbox">
-                <input type="checkbox" id="genre">
-                <label for="genre">  Lowest to Highest</label>
-            </div>
-            <div class="filter-checkbox">
-                <input type="checkbox" id="top-rated">
-                <label for="top-rated">  Highest to Lowest</label>
-            </div>
-            </div>
+  </div>
 </div>
+
