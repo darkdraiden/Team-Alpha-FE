@@ -57,7 +57,7 @@
 
 .image-container {
     position: relative;
-    display: inline-block; /* Ensures the container takes the size of the image */
+    display: inline-block; 
 }
 
 .image-container img {

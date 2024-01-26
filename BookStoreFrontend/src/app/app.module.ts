@@ -22,7 +22,8 @@ import { DialogModule } from 'primeng/dialog';
 import { VeiwAllComponent } from './components/veiw-all/veiw-all.component';
 import { DataViewModule } from 'primeng/dataview';
 import { FiltersComponent } from './components/filters/filters.component';
-import {RatingModule } from 'primeng/rating'
+import {RatingModule } from 'primeng/rating';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {RatingModule } from 'primeng/rating'
     BookIconsComponent,
     BookGridComponent,
     VeiwAllComponent,
-    FiltersComponent
+    FiltersComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import {RatingModule } from 'primeng/rating'
     NgbModule,
     DialogModule,
     DataViewModule,
-    RatingModule
+    RatingModule,
+
     
   ],
   providers: [MessageService],
