@@ -26,7 +26,7 @@ export class BookGridComponent {
   }
 
   fetchBooks() {
-    this.http.get<any>('http://localhost:8080/api/v1/book?limit=3')
+    this.http.get<any>('http://localhost:8080/api/v1/book/top-selling?limit=4')
       .subscribe((response: { data: any[]; }) => {
         this.books = response.data;
       });

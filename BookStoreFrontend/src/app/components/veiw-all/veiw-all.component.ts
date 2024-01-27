@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VeiwAllComponent implements OnInit{
 books:any[]=[];
-
 constructor(private httpClient:HttpClient){}
 
 ngOnInit(): void {
@@ -26,5 +25,12 @@ fetchBooks() {
   showbook:boolean=false;
   bookDetail(){
 this.showbook=true;
+  }
+
+  currentBook: any;
+
+  // Sample method to set the current book object
+  setCurrentBook(book: any) {
+    this.currentBook = book;
   }
 }

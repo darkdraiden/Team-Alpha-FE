@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { VeiwAllComponent } from '../veiw-all/veiw-all.component';
 @Component({
   selector: 'app-purcahse-now',
   templateUrl: './purcahse-now.component.html',
@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class PurcahseNowComponent {
 
+  constructor(private veiwAll : VeiwAllComponent){}
+
+  @Input() book:any;
 }

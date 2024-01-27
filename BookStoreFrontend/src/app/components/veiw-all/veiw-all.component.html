@@ -16,13 +16,14 @@
 
                 <h4>{{ book.title }}</h4>
                 <h5>By {{ book.author }}</h5>
-                <p>Price: ${{ book.price }}</p>
+                <p>Price: ${{ book.mrp*(100-book.discount)/100 }}</p>
                 <div class="button-container">
                     <button class="add-to-cart">Add to Cart</button>
-                    <button (click)="bookDetail()" class="buy-now">Buy Now</button>
-                    <p-dialog header="{book.title}" [(visible)]="showbook" [style]="{ width: '40vw' }" [modal]="true"
+                    <button (click)="bookDetail()" (click)="setCurrentBook(book)" class="buy-now">Buy Now</button>
+                    <p-dialog header={{currentBook.title}} [(visible)]="showbook" [style]="{ width: '40vw' }" [modal]="true"
                         [draggable]="false" [resizable]="false">
-                        <app-purcahse-now></app-purcahse-now>
+                        <app-purcahse-now [book]='currentBook'>
+                        </app-purcahse-now>
                     </p-dialog>
                 </div>
 
