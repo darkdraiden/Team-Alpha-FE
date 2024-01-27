@@ -28,6 +28,7 @@ import { BuyNowPageComponent } from './components/buy-now-page/buy-now-page.comp
 import { CartComponent } from './components/cart/cart.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { PurcahseNowComponent } from './components/purcahse-now/purcahse-now.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     CartComponent,
     OrdersComponent,
     ProfileComponent,
+    PurcahseNowComponent,
 
   ],
   imports: [

@@ -1,6 +1,6 @@
 
 <app-home></app-home>
-<div class="container">
+<div class="container" href="http://localhost:4200/buynow">
     <div class="left-column">
      <app-filters></app-filters>
     </div>
@@ -18,7 +18,10 @@
                 <p>Price: ${{ book.price }}</p>
                 <div class="button-container">
                     <button class="add-to-cart">Add to Cart</button>
-                    <button class="buy-now" ><a style="color:#EEEEEE;text-decoration: none;" href="http://localhost:4200/buynow">Buy Now</a></button>
+                    <button (click)="bookDetail()" class="buy-now" >Buy Now</button>
+                    <p-dialog header="{book.title}" [(visible)]="showbook" [style]="{ width: '40vw' }" [modal]="true" [draggable]="false" [resizable]="false">
+                       <app-purcahse-now></app-purcahse-now>
+                     </p-dialog>
                 </div>
                 
             </div>
