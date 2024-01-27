@@ -23,7 +23,10 @@
     </svg></button>
     <div class="dropdown-content">
       <a (click)="logout()">My Profile</a>
-      <a routerLink="order-history">View Cart</a>
+      <a (click)="showCart()" >View Cart</a>
+      <p-dialog [(visible)]="visibleCart" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+        <app-cart></app-cart>
+    </p-dialog>
       <a routerLink="cart">My Orders</a>
       <a routerLink="view-profile">Log Out</a>
     </div>

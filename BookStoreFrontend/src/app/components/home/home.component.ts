@@ -27,5 +27,11 @@ export class HomeComponent {
   showDialog() {
       this.visible = true;
   }
+
+  visibleCart: boolean = false;
+
+  showCart() {
+      this.visibleCart = true;
+  }
  
 }

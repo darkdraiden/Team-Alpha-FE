@@ -25,6 +25,7 @@ import { FiltersComponent } from './components/filters/filters.component';
 import {RatingModule } from 'primeng/rating';
 import { CheckboxModule } from 'primeng/checkbox';
 import { BuyNowPageComponent } from './components/buy-now-page/buy-now-page.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { BuyNowPageComponent } from './components/buy-now-page/buy-now-page.comp
     VeiwAllComponent,
     FiltersComponent,
     BuyNowPageComponent,
+    CartComponent,
 
   ],
   imports: [
