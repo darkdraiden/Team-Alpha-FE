@@ -29,7 +29,7 @@ this.showbook=true;
 
   currentBook: any;
 
-  // Sample method to set the current book object
+
   setCurrentBook(book: any) {
     this.currentBook = book;
   }
