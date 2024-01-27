@@ -6,13 +6,9 @@ button {
     border-radius: 2rem;
     width: 18rem;
     box-shadow: none;
-    margin-left: 4rem; 
+    margin-left: 1rem; 
 }
 
-form{
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-}
 
 a{
     color: hsla(154, 76%, 24%, 0.761);

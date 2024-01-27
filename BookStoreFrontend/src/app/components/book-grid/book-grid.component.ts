@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -9,16 +10,28 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class BookGridComponent {
   
-  constructor(private authService : AuthService){}
+  constructor(private authService : AuthService,private http: HttpClient){}
 
+  // books = [
+  //   { name: 'Book 1', author: 'Author 1', imageSrc: '../../../assets/img_c2.webp' },
+  //   { name: 'Book 2', author: 'Author 2', imageSrc: '../../../assets/img_c2.webp' },
+  //   { name: 'Book 3', author: 'Author 3', imageSrc: '../../../assets/img_c2.webp' },
+  //   { name: 'Book 4', author: 'Author 3', imageSrc: '../../../assets/img_c2.webp' },
+  // ];
 
+  books: any[] = [];
+  imageSrc='../../../assets/img_c2.webp';
+  ngOnInit(): void {
+    this.fetchBooks();
+  }
 
-  books = [
-    { name: 'Book 1', author: 'Author 1', imageSrc: '../../../assets/img_c1.webp' },
-    { name: 'Book 2', author: 'Author 2', imageSrc: '../../../assets/img_c2.webp' },
-    { name: 'Book 3', author: 'Author 3', imageSrc: '../../../assets/img_c3.webp' },
-    { name: 'Book 4', author: 'Author 3', imageSrc: '../../../assets/img_c4.webp' },
-  ];
+  fetchBooks() {
+    this.http.get<any>('http://localhost:8080/api/v1/book?limit=3')
+      .subscribe((response: { data: any[]; }) => {
+        this.books = response.data;
+      });
+  }
+
 
   visible: boolean = false;
 
