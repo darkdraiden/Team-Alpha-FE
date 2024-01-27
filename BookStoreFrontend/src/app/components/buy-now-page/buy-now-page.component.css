@@ -6,7 +6,6 @@
 
 .buy-now-column {
     width: 70%;
-    background-color: #f0f0f0;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -16,7 +15,6 @@
 
 .cart-column {
     width: 30%;
-    background-color: #e0e0e0; 
     padding: 20px;
 }
 
@@ -104,3 +102,7 @@ img {
     border-bottom-right-radius: 5px;
   }
   
+.icon-list li{
+  margin-top: 4rem;
+  color: hsla(153, 92%, 5%, 0.761);;
+}
