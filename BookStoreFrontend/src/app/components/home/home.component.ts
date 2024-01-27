@@ -34,4 +34,14 @@ export class HomeComponent {
       this.visibleCart = true;
   }
  
+  visibleOrder:boolean=false;
+
+  showvisibleOrder(){
+    this.visibleOrder=true;
+  }
+
+  showProfile:boolean=false;
+  MyProfile(){
+this.showProfile=true;
+  }
 }

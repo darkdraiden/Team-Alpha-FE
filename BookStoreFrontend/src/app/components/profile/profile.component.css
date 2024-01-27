@@ -1,0 +1,25 @@
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-table {
+    width: 100%;
+}
+
+.profile-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.profile-table td:last-child {
+    text-align: center;
+}
+
+.profile-table svg {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+

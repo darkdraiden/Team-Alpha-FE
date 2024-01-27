@@ -7,3 +7,15 @@ export interface cart{
   bookName:any;
 
 }
+
+
+export interface OrderItem {
+  id: number;
+  productName: string;
+  quantity: number;
+  totalPrice: number;
+  modeOfPayment: string;
+  deliveryDate: string;
+  purchaseDate: string;
+  status: string;
+}
