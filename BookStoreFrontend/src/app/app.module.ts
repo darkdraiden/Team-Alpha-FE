@@ -29,6 +29,9 @@ import { CartComponent } from './components/cart/cart.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PurcahseNowComponent } from './components/purcahse-now/purcahse-now.component';
+import { NewArrivalComponent } from './components/new-arrival/new-arrival.component';
+import { BestSellerComponent } from './components/best-seller/best-seller.component';
+import { TopRatedComponent } from './components/top-rated/top-rated.component';
 
 
 @NgModule({
@@ -47,6 +50,9 @@ import { PurcahseNowComponent } from './components/purcahse-now/purcahse-now.com
     OrdersComponent,
     ProfileComponent,
     PurcahseNowComponent,
+    NewArrivalComponent,
+    BestSellerComponent,
+    TopRatedComponent,
 
   ],
   imports: [

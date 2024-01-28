@@ -1,6 +1,7 @@
 // cart.component.ts
 import { Component, OnInit } from '@angular/core';
 import { cart } from '../../interfaces/books'
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -9,19 +10,17 @@ import { cart } from '../../interfaces/books'
 export class CartComponent implements OnInit {
   cartItems: cart[] = [];
 
-  constructor() { }
+  constructor(private httpClient:HttpClient) { }
 
   ngOnInit(): void {
- 
-    this.fetchCartItems();
+    this.fetchBooks();
   }
 
-  fetchCartItems(): void {
-
-    this.cartItems = [
-      { bookName: 'Book 1', orderPrice: 10, quantity: 2 },
-      { bookName: 'Book 2', orderPrice: 15, quantity: 1 }
-    ];
+  fetchBooks() {
+    this.httpClient.get<any>('http://localhost:8080/api/v1/cart/${userId}')
+      .subscribe(response => {
+        this.cartItems = response.data;
+      });
   }
 
   getTotalPrice(): any {
@@ -31,7 +30,7 @@ export class CartComponent implements OnInit {
   removeFromCart(item: cart): void {
     const index = this.cartItems.indexOf(item);
     if (index !== -1) {
-      this.cartItems.splice(index, 1); // Remove the item from the array
+      this.cartItems.splice(index, 1); 
     }
   }
 

@@ -47,6 +47,7 @@
     color: rgb(226, 234, 230);
     font-size: 16px;
     padding-top:10px;
+    padding-left:0;
     width: 8rem;
     height: 3rem;
     border-radius: 1rem;
@@ -100,3 +101,5 @@
  .arrow-container a{
   color: rgb(20, 105, 64);
  }
+
+ 
