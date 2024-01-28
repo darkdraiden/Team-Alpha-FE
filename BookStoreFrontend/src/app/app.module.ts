@@ -32,6 +32,8 @@ import { PurcahseNowComponent } from './components/purcahse-now/purcahse-now.com
 import { NewArrivalComponent } from './components/new-arrival/new-arrival.component';
 import { BestSellerComponent } from './components/best-seller/best-seller.component';
 import { TopRatedComponent } from './components/top-rated/top-rated.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AuthorsComponent } from './components/authors/authors.component';
 
 
 @NgModule({
@@ -53,6 +55,8 @@ import { TopRatedComponent } from './components/top-rated/top-rated.component';
     NewArrivalComponent,
     BestSellerComponent,
     TopRatedComponent,
+    FooterComponent,
+    AuthorsComponent,
 
   ],
   imports: [
