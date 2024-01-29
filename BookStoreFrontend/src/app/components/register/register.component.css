@@ -1,17 +1,17 @@
 button {
-    background-color: hsla(154, 76%, 24%, 0.761);
+    background-color:#214358;;
     color: #EEEEEE;
     height: 3rem;
     font-size: larger;
     border-radius: 2rem;
     width: 18rem;
     box-shadow: none;
-    margin-left: 4rem; 
+    margin-left: 2rem; 
 }
 
 
 a{
-    color: hsla(154, 76%, 24%, 0.761);
+    color:#214358;;
 }
 
 .register-container {
