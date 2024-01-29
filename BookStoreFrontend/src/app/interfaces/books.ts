@@ -2,10 +2,10 @@ export interface Books {
 }
 
 export interface cart{
-  orderPrice: any;
+  price: any;
   quantity: any;
   bookName:any;
-
+  bookId:any;
 }
 
 

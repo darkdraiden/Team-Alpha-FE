@@ -21,7 +21,7 @@ export class AuthService {
 
   loginUser(user: loginUser): Observable<any> {
     this.isLoggedIn=true;
-    
+    console.log(user);
     return this.http.post<any>(`${this.apiUrl}/user/login`,user);
   }
 

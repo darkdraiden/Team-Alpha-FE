@@ -1,10 +1,16 @@
 
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { FormBuilder, Validator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { User, loginUser } from 'src/app/interfaces/auth';
+import { LoginUserServiceService } from 'src/app/login-user-service.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { UserServiceService } from 'src/app/services/user-service.service';
+
+@Injectable({
+  providedIn: 'root',
+})
 
 @Component({
   selector: 'app-login',
@@ -24,7 +30,8 @@ export class LoginComponent {
   constructor(private fb:FormBuilder, 
     private authService :AuthService,
     private router:Router,
-    private msgService :MessageService
+    private msgService :MessageService,
+    private loginUserService: LoginUserServiceService
     ){}
 
   get email(){
@@ -53,9 +60,13 @@ export class LoginComponent {
           // localStorage.setItem('token',respone.token);
           // const tok =localStorage.getItem('token')
           console.log(response);
-          if(response.statusCode == 200){
+          if(response.token != null){
 
-          sessionStorage.setItem('email',currUser.email as string);
+            localStorage.setItem('token',response.token);
+            const user = response.user;
+
+            this.loginUserService.setUser(user);
+
           this.router.navigate(['/home']);
           }else{
             this.msgService.add({ severity: 'error', summary: 'error', detail: 'wrong password or email' });
