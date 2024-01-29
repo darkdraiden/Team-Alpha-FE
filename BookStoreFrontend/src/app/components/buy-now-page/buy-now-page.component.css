@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    width: 100%;
+    
+}
+
+.buy-now-column {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.cart-column {
+    width: 30%;
+    padding: 20px;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 27rem;
+    height: 30rem;
+    margin-top: rem;
+    margin-bottom: 10px; 
+  }
+
+  .book-details{
+    margin-top: 1rem;
+  }
+
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+
+.buy-button,
+.add-to-cart-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: hsla(154, 76%, 24%, 0.761);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    transition: background-color 0.3s; 
+}
+
+.buy-button:hover,
+.add-to-cart-button:hover{
+    background-color: hsla(154, 81%, 14%, 0.761); 
+}
+
+.counter-button {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 1rem;
+    
+  }
+  
+  .counter-btn {
+    background-color:hsla(154, 76%, 24%, 0.761);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   
+  }
+  
+  .counter-btn:hover {
+    background-color:hsla(154, 85%, 16%, 0.761);
+  }
+  
+  .counter-value {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .decrement-btn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .increment-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+.icon-list li{
+  margin-top: 4rem;
+  color: hsla(153, 92%, 5%, 0.761);;
+}

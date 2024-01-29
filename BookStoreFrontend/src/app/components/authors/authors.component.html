@@ -1,0 +1,17 @@
+<div class="container">
+    <h4>Featured Authors</h4>
+    <ngb-carousel *ngIf="authorGroups.length > 0">
+        <ng-template ngbSlide *ngFor="let authorGroup of authorGroups">
+            <div class="row">
+                <div class="col-md-3" *ngFor="let author of authorGroup">
+                    <div class="author-container">
+                        <img [src]="author.photoUrl" class="d-block w-100" alt="Author Photo">
+                        <div class="carousel-caption">
+                            <h5>{{ author.name }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>

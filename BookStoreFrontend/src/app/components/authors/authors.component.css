@@ -1,0 +1,33 @@
+.author-container {
+    position: relative;
+}
+
+h4{
+color:rgb(10, 101, 10);
+margin-top: 2rem;
+font-style: italic;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+.carousel-caption h5 {
+    margin: 0;
+    color: #fff;
+}
+
+.author-container img {
+    border-radius: 50%;
+    width: 15rem; 
+    height: 18rem; 
+    object-fit: cover;
+}
+
+
+

@@ -1,114 +1,13 @@
-
-.topnav {
-  background-color: #eeeeee;
-  overflow: hidden;
-  padding: 10px;
-  overflow: visible;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  max-height: 60px;
-  margin-right: 20px;
-}
-
-
-.topnav a {
-  float: right;
-  color: hsla(154, 76%, 24%, 0.761);
-  text-decoration: none;
-  font-size: 20px;
-  padding: 10px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  float: right;
-
-}
-
-.dropbtn {
-  background-color: #eeeeee; 
-  color: hsla(154, 76%, 24%, 0.761);
-  text-decoration: none;
-  font-size: 22px;
-  padding: 10px;
-  border: none;
+.heading {
+  margin-top: 2rem;
+  margin-left: 45%;
+  margin-right: 30%;
+  color: hsla(154, 84%, 12%, 0.761);
+  font-size: 2rem;
   cursor: pointer;
-
+  transition: font-size 1s ease; 
 }
 
-.dropbtn:hover {
-  background-color: #ddd; 
-}
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #EEEEEE;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  right: 0;
-}
-
-.dropdown-content a {
-  padding: 5px 10px;
-  text-decoration: none;
-  display: block;
-  font-size: medium;
-  color: hsla(154, 76%, 24%, 0.761);
-  z-index: 999;
-  margin-right: 3rem;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.logo{
-  width: 15rem;
-height: 5rem;
-}
-
-.search-bar {
-  flex-grow: 0;
-  margin: auto 0;
-  display: flex;
-  width: 40rem;
-  position: relative;
-  border: 2px solid rgb(176, 201, 193);
-  border-radius: .5rem;
-
-}
-
-.search-bar input {
-  width: calc(100% - 40px); 
-  padding: 10px;
-  font-size: 16px;
-  border: none;  
-  outline: none; 
-  border-radius: .5rem;
-}
-
-
-.search-icon {
-  width: 20px;
-  height: 20px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="%23138f5f" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>');
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+.heading:hover {
+  font-size: 2.5rem; 
 }

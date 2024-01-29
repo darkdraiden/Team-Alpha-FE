@@ -1,0 +1,32 @@
+<div class="container"  *ngIf="book">
+    <div class="buy-now-column">
+        <img src="../../../assets/img.avif" alt="books">
+        <h3>Author: {{book.author}}</h3>
+        <p>Price: {{book.mrp*(100-book.discount)/100 }}</p>
+
+        <div class="button-row">
+            <button class="buy-button">Place Order</button>
+            <div class="counter-button">
+                <button class="counter-btn decrement-btn">-</button>
+                <span class="counter-value">1</span>
+                <button class="counter-btn increment-btn">+</button>
+            </div>
+        </div>
+
+        <div class="book-details">
+            <h5>Book Details</h5>
+            <p>Description: {{book.description}}</p>
+            <p>Publication: {{book.publication}}</p>
+            <p>Genre: {{book.genre}}</p>
+            <div class="description">
+                <h5>Additional Details</h5>
+                <p><span>Language:</span> {{book.english}}</p>
+                <p><span>Binding:</span> {{book.binding}}</p>
+                <p><span>Pages:</span> {{book.page}}</p>
+                <p><span>Rating:</span> {{book.rating}}</p>
+            </div>
+        </div>
+    </div>
+
+
+

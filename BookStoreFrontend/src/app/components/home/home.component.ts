@@ -9,23 +9,5 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  isDropdownOpen: boolean = false; 
   
-  constructor(private router :Router,
-  public authService :AuthService){}
-  
-  toggleDropdown(): void {
-    this.isDropdownOpen = !this.isDropdownOpen;
-  }
-
-  logout(): void {
-    this.authService.LogoutUser();
-  }
-
-  visible: boolean = false;
-
-  showDialog() {
-      this.visible = true;
-  }
- 
 }

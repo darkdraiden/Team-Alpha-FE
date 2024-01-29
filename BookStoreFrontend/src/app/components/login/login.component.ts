@@ -50,6 +50,8 @@ export class LoginComponent {
       const currUser={...this.loginForm.value};
       this.authService.loginUser(currUser as loginUser).subscribe(
         response =>{
+          // localStorage.setItem('token',respone.token);
+          // const tok =localStorage.getItem('token')
           console.log(response);
           if(response.statusCode == 200){
 
@@ -59,7 +61,9 @@ export class LoginComponent {
             this.msgService.add({ severity: 'error', summary: 'error', detail: 'wrong password or email' });
           }     
         },
+
         error =>{
+          console.warn(error)
           this.msgService.add({ severity: 'error', summary: 'error', detail: 'API error' });
         }
       )

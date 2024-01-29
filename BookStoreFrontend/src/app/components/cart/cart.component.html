@@ -1,0 +1,31 @@
+<div class="cart-container">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Book Name</th>
+          <th>Order Price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td>{{ item.bookName }}</td>
+          <td>{{ item.orderPrice }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.orderPrice * item.quantity }}</td>
+          <td (click)="removeFromCart(item)">Remove</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total:</td>
+          <td>{{ getTotalPrice() }}</td>
+          <td></td> 
+        </tr>
+      </tfoot>
+    </table>
+    <button (click)="placeOrder()" class="place-order-button">Place Order</button>
+</div>
+

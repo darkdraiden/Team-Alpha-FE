@@ -1,0 +1,102 @@
+.table-container {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    margin-left: 4rem;
+  }
+  
+  .table-container td {
+    padding: 0 10px; 
+    width: 15%;
+  }
+  
+  .image-card {
+    position: relative;
+    height: 30rem; 
+  }
+  
+  .table-image {
+    width: 100%;
+    height: 100%; 
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+    transition: .5s ease;
+  }
+  
+  .table-overlay,
+  .author-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .table-overlay {
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: .5s ease;
+  }
+  
+  .table-container:hover .table-overlay {
+    opacity: 1;
+  }
+  
+  .table-text {
+    background-color: #cf2222f2;
+    color: rgb(226, 234, 230);
+    font-size: 16px;
+  padding: 0;
+    width: 3.5rem;
+    height: 2rem;
+    border-radius: 0rem;
+   margin-bottom: 28rem;
+   margin-right: 11rem;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+  }
+  
+  .image-card:hover .table-text {
+    opacity: 1; 
+  }
+  
+  
+  .author-text {
+    bottom: 0;
+    background-color: #bde7d7f2;
+    color: rgb(20, 105, 64);
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .line-container {
+    position: relative;
+    width: 82rem; 
+    height: 1px; 
+    background-color: #000; 
+    margin-left: 3.5rem;
+    margin-right: 3rem;
+    margin-top: 3.5rem;
+  }
+  
+  .line-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60rem;
+    height: 1px; 
+    background-color: #000; 
+    transform: translateY(-50%);
+  }
+  
+  .arrow-container {
+    position: relative;
+    float: right; 
+    margin-top: 2rem; 
+    margin-right: 5rem;
+  }
+  
+ .arrow-container a{
+  color: rgb(20, 105, 64);
+ }

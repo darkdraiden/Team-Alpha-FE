@@ -24,7 +24,18 @@ import { DataViewModule } from 'primeng/dataview';
 import { FiltersComponent } from './components/filters/filters.component';
 import {RatingModule } from 'primeng/rating';
 import { CheckboxModule } from 'primeng/checkbox';
-
+import { BuyNowPageComponent } from './components/buy-now-page/buy-now-page.component';
+import { CartComponent } from './components/cart/cart.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { PurcahseNowComponent } from './components/purcahse-now/purcahse-now.component';
+import { NewArrivalComponent } from './components/new-arrival/new-arrival.component';
+import { BestSellerComponent } from './components/best-seller/best-seller.component';
+import { TopRatedComponent } from './components/top-rated/top-rated.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AuthorsComponent } from './components/authors/authors.component';
+import { FormsModule } from '@angular/forms';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +48,17 @@ import { CheckboxModule } from 'primeng/checkbox';
     BookGridComponent,
     VeiwAllComponent,
     FiltersComponent,
+    BuyNowPageComponent,
+    CartComponent,
+    OrdersComponent,
+    ProfileComponent,
+    PurcahseNowComponent,
+    NewArrivalComponent,
+    BestSellerComponent,
+    TopRatedComponent,
+    FooterComponent,
+    AuthorsComponent,
+    NavBarComponent,
 
   ],
   imports: [
@@ -53,7 +75,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     DialogModule,
     DataViewModule,
     RatingModule,
-CheckboxModule
+CheckboxModule,
+FormsModule
     
   ],
   providers: [MessageService],
