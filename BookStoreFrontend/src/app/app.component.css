@@ -1,4 +1,4 @@
-.h3 {
+.heading {
     margin-top: 2rem;
     margin-left: 45%;
     margin-right: 30%;
@@ -8,7 +8,7 @@
     transition: font-size 1s ease; 
   }
   
-  .h3:hover {
+  .heading:hover {
     font-size: 2.5rem; 
   }
   
