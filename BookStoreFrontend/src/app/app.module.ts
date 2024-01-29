@@ -34,7 +34,8 @@ import { BestSellerComponent } from './components/best-seller/best-seller.compon
 import { TopRatedComponent } from './components/top-rated/top-rated.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AuthorsComponent } from './components/authors/authors.component';
-
+import { FormsModule } from '@angular/forms';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { AuthorsComponent } from './components/authors/authors.component';
     TopRatedComponent,
     FooterComponent,
     AuthorsComponent,
+    NavBarComponent,
 
   ],
   imports: [
@@ -73,7 +75,8 @@ import { AuthorsComponent } from './components/authors/authors.component';
     DialogModule,
     DataViewModule,
     RatingModule,
-CheckboxModule
+CheckboxModule,
+FormsModule
     
   ],
   providers: [MessageService],

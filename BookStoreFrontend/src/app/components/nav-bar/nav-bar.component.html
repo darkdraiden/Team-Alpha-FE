@@ -1,0 +1,50 @@
+<div class="topnav">
+    <img src="../../../assets/Lost Library Logo.png" alt="Logo" class="logo">
+    <div class="search-bar">
+      <div class="search-icon"></div>
+      <input type="text">
+    </div>
+  
+  
+    <a routerLink="home"><b>Home</b></a>
+    <a><b>Contact Us</b></a>
+    <a *ngIf="!authService.isLoggedIn" (click)="showDialog()"><b>Sign Up</b></a>
+    <p-dialog header="Register" [modal]="true" [(visible)]="visible" [style]="{width: '40vw',height: '47vw'}"
+      [dismissableMask]="true">
+      <p>
+        <app-register></app-register>
+      </p>
+    </p-dialog>
+  
+    <a *ngIf="authService.isLoggedIn" (click)=" showCart()"><b>My Cart</b></a>
+    <p-dialog header="My Cart" [(visible)]="visibleCart" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+      [resizable]="false">
+      <app-cart></app-cart>
+    </p-dialog>
+  
+    <div class="dropdown" *ngIf="authService.isLoggedIn">
+      <button class="dropbtn"><b>User </b><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+          fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+        </svg></button>
+      <div class="dropdown-content">
+        <a (click)="MyProfile()">My Profile</a>
+        <p-dialog header="My Profile" [(visible)]="showProfile" [modal]="true" [style]="{ width: '50vw' }"
+          [draggable]="false" [resizable]="false">
+          <app-profile></app-profile>
+        </p-dialog>
+        <!-- <a (click)="showCart()" >View Cart</a>
+        <p-dialog header="My Cart" [(visible)]="visibleCart" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+          <app-cart></app-cart>
+      </p-dialog> -->
+        <a (click)="showvisibleOrder()">My Orders</a>
+        <p-dialog header="Order History" [(visible)]="visibleOrder" [modal]="true" [style]="{ width: '50vw' }"
+          [draggable]="false" [resizable]="false">
+          <app-orders></app-orders>
+        </p-dialog>
+        <a routerLink="view-profile">Log Out</a>
+      </div>
+    </div>
+  </div>
+  
