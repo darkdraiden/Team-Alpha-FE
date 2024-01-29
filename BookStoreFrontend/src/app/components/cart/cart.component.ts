@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { cart } from '../../interfaces/books'
 import { HttpClient } from '@angular/common/http';
+import { LoginUserServiceService } from 'src/app/login-user-service.service';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -10,21 +11,26 @@ import { HttpClient } from '@angular/common/http';
 export class CartComponent implements OnInit {
   cartItems: cart[] = [];
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient,private loginUserService:LoginUserServiceService) { }
 
   ngOnInit(): void {
-    this.fetchBooks();
+    
+    this.fetchCart();
   }
 
-  fetchBooks() {
-    this.httpClient.get<any>('http://localhost:8080/api/v1/cart/${userId}')
+  fetchCart() {
+    const user=this.loginUserService.getUser();
+    
+    this.httpClient.get<any>(`http://localhost:8080/api/v1/cart/${user.userId}`)
       .subscribe(response => {
+        console.log(response);
         this.cartItems = response.data;
       });
+      
   }
 
   getTotalPrice(): any {
-    return this.cartItems.reduce((total, item) => total + (item.orderPrice * item.quantity), 0);
+    return this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   }
 
   removeFromCart(item: cart): void {
