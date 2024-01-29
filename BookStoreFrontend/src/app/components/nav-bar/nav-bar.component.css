@@ -15,7 +15,7 @@
   
   .topnav a {
     float: right;
-    color:#AEB8C4;
+    color:#d5d8db;
     text-decoration: none;
     font-size: 20px;
     padding: 10px;
@@ -30,7 +30,7 @@
   
   .dropbtn {
     background-color: #eeeeee; 
-    color: hsla(154, 76%, 24%, 0.761);
+    color:#214358;
     text-decoration: none;
     font-size: 22px;
     padding: 10px;
@@ -59,7 +59,7 @@
     text-decoration: none;
     display: block;
     font-size: medium;
-    color: hsla(154, 76%, 24%, 0.761);
+    color: #214358;
     z-index: 999;
     margin-right: 3rem;
     text-align: left;

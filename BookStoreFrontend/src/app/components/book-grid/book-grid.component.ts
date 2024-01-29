@@ -20,7 +20,6 @@ export class BookGridComponent {
   // ];
 
   books: any[] = [];
-  imageSrc='../../../assets/img_c2.webp';
   ngOnInit(): void {
     this.fetchBooks();
   }
