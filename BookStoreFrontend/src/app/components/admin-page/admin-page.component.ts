@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-page.component.css']
 })
 export class AdminPageComponent {
+  visible: boolean = false;
 
+  showDialog() {
+      this.visible = true;
+  }
 }

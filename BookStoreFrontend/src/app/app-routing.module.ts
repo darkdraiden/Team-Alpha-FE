@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { VeiwAllComponent } from './components/veiw-all/veiw-all.component';
 import { BuyNowPageComponent } from './components/buy-now-page/buy-now-page.component';
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
+import { UpdateBookComponent } from './component/update-book/update-book.component';
 
 
 
@@ -45,6 +46,12 @@ const routes : Routes=[
   {
     path:'admin',
     component:AdminPageComponent
+
+  },
+
+  {
+    path:'updateBook',
+    component:UpdateBookComponent
 
   },
 
