@@ -10,13 +10,15 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   isLoggedIn: boolean = false;
+  isSignup:boolean=false;
   
   private apiUrl='http://localhost:8080/api/v1'
   constructor(private http : HttpClient,
     private router :Router ) { }
 
   registerUser(user: User): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/user`, user);
+    this.isSignup=true;
+    return this.http.post<any>(`${this.apiUrl}/user/signup`, user);
   }
 
   loginUser(user: loginUser): Observable<any> {
@@ -27,7 +29,7 @@ export class AuthService {
 
   LogoutUser(){
     this.isLoggedIn=false;
-    sessionStorage.clear();
+    localStorage.setItem('token',"null");
     this.router.navigate(['home']);
   }
   

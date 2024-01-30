@@ -2,11 +2,11 @@
   <tr>
     <td *ngFor="let book of books">
       <div class="image-card">
-        <img [src]="imageSrc" alt="Book Image" class="table-image">
+        <img [src]="book.url" alt="Book Image" class="table-image">
         <div class="table-overlay">
-          <p class="table-text">TOP SELLING</p>
+          <p class="table-text">HOT DEALS</p>
         </div>
-        <div class="author-text">{{ book.title }} <br> {{ book.author }}</div>
+        <div class="author-text">{{ book.title }} <br>By {{ book.author }}</div>
       </div>
     </td>
   </tr>

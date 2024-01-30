@@ -8,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VeiwAllComponent implements OnInit{
 books:any[]=[];
+buttonText: string = 'Add to Cart';
+buttonTextMap: Map<string, string> = new Map<string, string>();
 constructor(private httpClient:HttpClient){}
 
 ngOnInit(): void {
   this.fetchBooks();
+  
 }
- img='../../../assets/img_c1.webp';
+
 
 fetchBooks() {
   this.httpClient.get<any>('http://localhost:8080/api/v1/book')
@@ -32,5 +35,11 @@ this.showbook=true;
 
   setCurrentBook(book: any) {
     this.currentBook = book;
+  }
+
+  addToCart() {
+    // Perform your logic here, such as adding the item to the cart
+    // Change the button text after adding the item
+    this.buttonText = 'Item Added';
   }
 }

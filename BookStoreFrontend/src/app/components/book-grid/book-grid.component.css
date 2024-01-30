@@ -43,13 +43,13 @@
   }
   
   .table-text {
-    background-color: #cf2222f2;
+    background-color:red;
     color: rgb(226, 234, 230);
     font-size: 13px;
-    padding-top:0px;
+    padding-top:1px;
     width: 3rem;
-    height: 3rem;
-   margin-bottom: 27rem;
+    height: 4rem;
+   margin-bottom: 26rem;
    margin-right: 11rem;
     opacity: 0; 
     transition: opacity 0.5s ease;
@@ -62,8 +62,8 @@
   
   .author-text {
     bottom: 0;
-    background-color: #bde7d7f2;
-    color: rgb(20, 105, 64);
+    background-color:#bde7d7f2;
+    color:  #214358;
     font-size: 20px;
     padding: 8px;
   }
@@ -97,5 +97,5 @@
   }
   
  .arrow-container a{
-  color: rgb(20, 105, 64);
+  color: #214358;
  }

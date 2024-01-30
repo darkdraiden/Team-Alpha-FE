@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class BestSellerComponent {
   constructor(private http :HttpClient){}
   books: any[] = [];
-  imageSrc='../../../assets/img_c2.webp';
+ 
   ngOnInit(): void {
     this.fetchBooks();
   }
@@ -21,3 +21,4 @@ export class BestSellerComponent {
       });
   }
 }
+ 

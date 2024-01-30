@@ -8,20 +8,16 @@
 
         <div class="book-container">
             <div class="book" *ngFor="let book of books">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red"
-                    class="bi bi-bookmark-heart-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z" />
-                </svg> -->
-                <img [src]="img" [alt]="book.title">
+                <img [src]="book.url" [alt]="book.title">
 
                 <h4>{{ book.title }}</h4>
                 <h5>By {{ book.author }}</h5>
-                <p>Price: ${{ book.mrp*(100-book.discount)/100 }}</p>
+                <p>Price: Rs.{{ book.mrp*(100-book.discount)/100 }}</p>
                 <div class="button-container">
-                    <button class="add-to-cart">Add to Cart</button>
+                    <!-- <button class="add-to-cart">Add to Cart</button> -->
+                    <button class="add-to-cart" (click)="addToCart()" [innerText]="buttonText"></button>
                     <button (click)="bookDetail()" (click)="setCurrentBook(book)" class="buy-now">Buy Now</button>
-                    <p-dialog header={{currentBook.title}} [(visible)]="showbook" [style]="{ width: '40vw' }" [modal]="true"
+                    <p-dialog [(visible)]="showbook" [style]="{ width: '40vw' }" [modal]="true"
                         [draggable]="false" [resizable]="false">
                         <app-purcahse-now [book]='currentBook'>
                         </app-purcahse-now>

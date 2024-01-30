@@ -13,7 +13,7 @@
   .image-card {
     position: relative;
     height: 30rem; 
-  }
+  } 
   
   .table-image {
     width: 100%;
@@ -64,7 +64,7 @@
   .author-text {
     bottom: 0;
     background-color: #bde7d7f2;
-    color: rgb(20, 105, 64);
+    color:  #214358;
     font-size: 20px;
     padding: 8px;
   }
@@ -98,5 +98,5 @@
   }
   
  .arrow-container a{
-  color: rgb(20, 105, 64);
+  color: #214358;
  }

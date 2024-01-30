@@ -1,4 +1,36 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 
+.slide {
+  width: 100%;
+  height: 300px;
+  background-color: #ddd;
+  display: none;
+  position: absolute;
+}
+
+.slide:nth-child(1) { background-color: #ccc; }
+.slide:nth-child(2) { background-color: #bbb; }
+.slide:nth-child(3) { background-color: #aaa; }
+.slide:nth-child(4) { background-color: #999; }
+
+.slide.active {
+  display: block;
+  animation: fade 5s infinite; /* Adjust transition speed as needed */
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+/* 
 .carousel-container {
   max-width: 100%;
   margin-top: 0rem;
@@ -63,4 +95,4 @@
 .next {
   right: 10px;
   border-radius: 0 5px 5px 0;
-}
+} */

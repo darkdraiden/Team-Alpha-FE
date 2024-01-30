@@ -10,4 +10,21 @@ export class PurcahseNowComponent {
   constructor(private veiwAll : VeiwAllComponent){}
 
   @Input() book:any;
+  buttonText: string = 'Add to Cart';
+
+  addToCart() {
+     this.buttonText = 'Item Added';
+  }
+
+  counterValue: number = 1;
+
+  increment() {
+    this.counterValue++;
+  }
+
+  decrement() {
+    if (this.counterValue > 1) {
+      this.counterValue--;
+    }
+  }
 }

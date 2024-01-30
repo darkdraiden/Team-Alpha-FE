@@ -1,5 +1,5 @@
 button {
-    background-color: hsla(154, 76%, 24%, 0.761);
+    background-color: #214358;
     color: #EEEEEE;
     height: 3rem;
     font-size: larger;
@@ -8,7 +8,7 @@ button {
     box-shadow: none;
     margin-top: 10px;
     margin-left: 4.5rem; 
-}
+} 
 
 form{
     margin-top: 3rem;
@@ -16,6 +16,6 @@ form{
 }
 
 a{
-    color: hsla(154, 76%, 24%, 0.761);
+    color:#214358;
 }
 

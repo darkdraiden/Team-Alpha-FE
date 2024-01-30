@@ -19,10 +19,11 @@
 }
 
 button{
-    background-color: hsla(154, 76%, 24%, 0.761);
+    background-color: #214358;
     color: #EEEEEE;
     margin-top: 1rem;
     border-radius: 1rem;
+    border: none;
 }
 
 @media screen and (max-width: 600px) {

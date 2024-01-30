@@ -3,7 +3,7 @@
 }
 
 h4{
-color:rgb(10, 101, 10);
+color:#214358;
 margin-top: 2rem;
 font-style: italic;
 }
@@ -24,8 +24,8 @@ font-style: italic;
 
 .author-container img {
     border-radius: 50%;
-    width: 15rem; 
-    height: 18rem; 
+    width: 2cm; 
+    height: 5cm; 
     object-fit: cover;
 }
 

@@ -1,15 +1,16 @@
 <div class="container"  *ngIf="book">
     <div class="buy-now-column">
-        <img src="../../../assets/img.avif" alt="books">
+        <img src="../../../assets/img.avif" alt="books"><h2>{{book.name}}</h2>
+        <h3>{{book.title}}</h3>
         <h3>Author: {{book.author}}</h3>
         <p>Price: {{book.mrp*(100-book.discount)/100 }}</p>
 
         <div class="button-row">
-            <button class="buy-button">Place Order</button>
+            <button class="buy-button" (click)="addToCart()" [innerText]="buttonText"></button>
             <div class="counter-button">
-                <button class="counter-btn decrement-btn">-</button>
-                <span class="counter-value">1</span>
-                <button class="counter-btn increment-btn">+</button>
+                <button class="counter-btn decrement-btn" (click)="decrement()">-</button>
+                <span class="counter-value">{{ counterValue }}</span>
+                <button class="counter-btn increment-btn"  (click)="increment()">+</button>
             </div>
         </div>
 
