@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VeiwAllComponent implements OnInit{
 books:any[]=[];
+buttonText: string = 'Add to Cart';
 constructor(private httpClient:HttpClient){}
 
 ngOnInit(): void {
@@ -32,5 +33,11 @@ this.showbook=true;
 
   setCurrentBook(book: any) {
     this.currentBook = book;
+  }
+
+  addToCart() {
+    // Perform your logic here, such as adding the item to the cart
+    // Change the button text after adding the item
+    this.buttonText = 'Item Added';
   }
 }

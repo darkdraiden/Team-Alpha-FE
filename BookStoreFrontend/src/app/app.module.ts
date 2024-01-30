@@ -36,6 +36,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AuthorsComponent } from './components/authors/authors.component';
 import { FormsModule } from '@angular/forms';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { OrderFormComponent } from './components/order-form/order-form.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     FooterComponent,
     AuthorsComponent,
     NavBarComponent,
+    OrderFormComponent,
 
   ],
   imports: [

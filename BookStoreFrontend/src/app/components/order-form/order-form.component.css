@@ -1,0 +1,38 @@
+.inline-label {
+    display: inline-block;
+    width: 150px; 
+    margin-right: 20px; 
+    vertical-align: top; 
+  }
+  
+  form {
+    width: 700px; 
+    margin: 0 auto;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 20px); 
+    padding: 8px;
+    margin-bottom: 15px; 
+    box-sizing: border-box;
+  }
+  
+  input[type="radio"] {
+    padding-right: 10rem;
+    margin-left: 3rem;
+  }
+  
+  span.error-message {
+    color: red;
+    font-size: 12px;
+    display: inline-block; 
+    margin-top: 0;
+  }
+
+  button{
+    margin-top: 2rem;
+    background-color:#214358;
+    color: #EEEE;
+    border: none;
+  }
+  

@@ -9,7 +9,7 @@ import { LoginUserServiceService } from 'src/app/login-user-service.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cartItems: cart[] = [];
+  // cartItems: cart[] = [];
 
   constructor(private httpClient:HttpClient,private loginUserService:LoginUserServiceService) { }
 
@@ -29,33 +29,44 @@ export class CartComponent implements OnInit {
       
   }
 
-  getTotalPrice(): any {
-    return this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
-  }
+//   cartItems: any[] = [
+//     { bookName: 'Book 1', price: 10, quantity: 1 },
+//     { bookName: 'Book 2', price: 15, quantity: 2 },
+//     { bookName: 'Book 3', price: 20, quantity: 1 }
+// ];
 
-  removeFromCart(item: cart): void {
+  cartItems: any[] = [
+    { bookName: 'Book 1', price: 10, quantity: 1 },
+    { bookName: 'Book 2', price: 15, quantity: 2 },
+    { bookName: 'Book 3', price: 20, quantity: 1 }
+];
+
+getTotalPrice(): number {
+    return this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+}
+
+removeFromCart(item: any): void {
     const index = this.cartItems.indexOf(item);
     if (index !== -1) {
-      this.cartItems.splice(index, 1); 
+        this.cartItems.splice(index, 1);
     }
-  }
-  decrementQuantity(item: any) {
-    if (item.quantity > 1) {
-      item.quantity--;
-    }
-  }
+}
 
-  // Function to increment quantity
-  incrementQuantity(item: any) {
+incrementQuantity(item: any): void {
     item.quantity++;
-  }
+}
 
-  // Function to clear the cart
-  clearCart() {
-    this.cartItems = []; // Clearing the cart by emptying the array
-  }
+decrementQuantity(item: any): void {
+    if (item.quantity > 1) {
+        item.quantity--;
+    }
+}
 
-  placeOrder(): void {
-     console.log('Order placed!');
-     }
+clearCart(): void {
+    this.cartItems = [];
+}
+
+placeOrder(): void {
+    // Logic for placing the order
+}
 }
