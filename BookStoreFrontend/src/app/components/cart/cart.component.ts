@@ -67,6 +67,5 @@ clearCart(): void {
 }
 
 placeOrder(): void {
-    // Logic for placing the order
 }
 }

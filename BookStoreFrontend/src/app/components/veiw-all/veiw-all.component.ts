@@ -9,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class VeiwAllComponent implements OnInit{
 books:any[]=[];
 buttonText: string = 'Add to Cart';
+buttonTextMap: Map<string, string> = new Map<string, string>();
 constructor(private httpClient:HttpClient){}
 
 ngOnInit(): void {
   this.fetchBooks();
+  
 }
 
 
