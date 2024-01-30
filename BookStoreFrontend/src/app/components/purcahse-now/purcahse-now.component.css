@@ -44,7 +44,7 @@ img {
 .buy-button{
     padding: 10px 20px;
     border: none;
-    background-color: hsla(154, 76%, 24%, 0.761);
+    background-color:#214358;
     color: #fff;
     font-size: medium;
     cursor: pointer;
@@ -55,7 +55,7 @@ img {
 
 .buy-button:hover,
 .add-to-cart-button:hover{
-    background-color: hsla(154, 81%, 14%, 0.761); 
+    background-color:#214358; 
 }
 
 .counter-button {
@@ -70,7 +70,7 @@ img {
   }
   
   .counter-btn {
-    background-color:hsla(154, 76%, 24%, 0.761);
+    background-color:#214358;
     color: #fff;
     border: none;
     padding: 10px;
@@ -81,7 +81,7 @@ img {
   }
   
   .counter-btn:hover {
-    background-color:hsla(154, 85%, 16%, 0.761);
+    background-color:#040a0e;
   }
   
   .counter-value {
@@ -106,5 +106,5 @@ img {
   
 .icon-list li{
   margin-top: 4rem;
-  color: hsla(153, 92%, 5%, 0.761);;
+  color:#0d2432;
 }

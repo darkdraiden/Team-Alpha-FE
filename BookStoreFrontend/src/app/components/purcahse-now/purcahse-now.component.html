@@ -1,6 +1,7 @@
 <div class="container"  *ngIf="book">
     <div class="buy-now-column">
-        <img src="../../../assets/img.avif" alt="books">
+        <img src="../../../assets/img.avif" alt="books"><h2>{{book.name}}</h2>
+        <h3>{{book.title}}</h3>
         <h3>Author: {{book.author}}</h3>
         <p>Price: {{book.mrp*(100-book.discount)/100 }}</p>
 

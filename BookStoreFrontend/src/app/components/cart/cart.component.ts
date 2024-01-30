@@ -39,6 +39,21 @@ export class CartComponent implements OnInit {
       this.cartItems.splice(index, 1); 
     }
   }
+  decrementQuantity(item: any) {
+    if (item.quantity > 1) {
+      item.quantity--;
+    }
+  }
+
+  // Function to increment quantity
+  incrementQuantity(item: any) {
+    item.quantity++;
+  }
+
+  // Function to clear the cart
+  clearCart() {
+    this.cartItems = []; // Clearing the cart by emptying the array
+  }
 
   placeOrder(): void {
      console.log('Order placed!');
