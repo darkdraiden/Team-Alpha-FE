@@ -10,10 +10,9 @@ export class NewArrivalComponent {
 
   constructor(private http :HttpClient){}
   books: any[] = [];
-  imageSrc='../../../assets/img_c2.webp';
   ngOnInit(): void {
     this.fetchBooks();
-  }
+  } 
 
   fetchBooks() {
     this.http.get<any>('http://localhost:8080/api/v1/book/top-selling?limit=4')

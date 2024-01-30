@@ -13,7 +13,7 @@ constructor(private httpClient:HttpClient){}
 ngOnInit(): void {
   this.fetchBooks();
 }
- img='../../../assets/img_c1.webp';
+
 
 fetchBooks() {
   this.httpClient.get<any>('http://localhost:8080/api/v1/book')

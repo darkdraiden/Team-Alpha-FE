@@ -28,14 +28,14 @@
   .checkbox-container input[type="checkbox"] + span {
     cursor: pointer;
     padding-left: 25px;
-    background-color: hsl(152, 34%, 84%);
+    background-color:  #91bad4;
     border-radius: 5px;
     display: inline-block;
     padding-right: 1rem;
   }
   
   .checkbox-container input[type="checkbox"]:checked + span {
-    background-color: darkgreen;
+    background-color:  #214358;
     color: white;
   }
   

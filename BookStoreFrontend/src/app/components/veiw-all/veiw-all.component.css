@@ -17,7 +17,6 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
-    border: #09441f;
 }
 
 .book {
@@ -44,7 +43,7 @@
 .button-container button {
     padding: 8px 16px;
     border: none;
-    background-color:  hsla(154, 76%, 24%, 0.761);
+    background-color: #214358;
     color:#EEEEEE;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -52,7 +51,7 @@
 }
 
 .button-container button:hover {
-    background-color: #0a411d;
+    background-color: #000307;
 }
 
 .image-container {

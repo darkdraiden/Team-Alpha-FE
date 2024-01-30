@@ -43,4 +43,10 @@ export class NavBarComponent {
   MyProfile(){
 this.showProfile=true;
   }
+
+  log:boolean=false;
+  islog(){
+this.log=true;
+  }
+
 }
