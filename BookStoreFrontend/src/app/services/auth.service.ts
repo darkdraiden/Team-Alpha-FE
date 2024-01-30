@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { User, loginUser } from '../interfaces/auth';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { Books } from '../interfaces/books';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +34,10 @@ export class AuthService {
     this.router.navigate(['home']);
   }
   
+  addBook(book: Books): Observable<any> {
+    this.isSignup=true;
+    return this.http.post<any>(`${this.apiUrl}/user/signup`,book);
+  }
 }
 
 

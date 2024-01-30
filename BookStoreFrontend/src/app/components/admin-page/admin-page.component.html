@@ -1,11 +1,13 @@
 <div class="topnav">
     <img src="../../../assets/Lost Library Logo.png" alt="Logo" class="logo">
-    <a routerLink="home"><b>ADMIN</b></a>
-    <a><b>Add</b></a> 
+    <a routerLink="home"><b>SELLER DASHBOARD</b></a>
     <a><b>View</b></a> 
-    <a><b>Orders</b></a> 
-    <a ><b>Login</b></a>  
-    <a><b>Log out</b></a>       
+    <a (click)="showDialog()" ><b>Add</b></a> 
+<p-dialog header="Add Book" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+   <app-add-book></app-add-book>
+</p-dialog> 
+<a ><b>Update</b></a> 
+    <a ><b>Login</b></a>        
   </div>
   <app-book-icons></app-book-icons>
   <app-book-grid></app-book-grid>

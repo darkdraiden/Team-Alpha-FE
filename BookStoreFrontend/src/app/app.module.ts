@@ -38,6 +38,8 @@ import { FormsModule } from '@angular/forms';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { OrderFormComponent } from './components/order-form/order-form.component';
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
+import { AddBookComponent } from './component/add-book/add-book.component';
+import { UpdateBookComponent } from './component/update-book/update-book.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { AdminPageComponent } from './components/admin-page/admin-page.component
     NavBarComponent,
     OrderFormComponent,
     AdminPageComponent,
+    AddBookComponent,
+    UpdateBookComponent,
 
   ],
   imports: [
