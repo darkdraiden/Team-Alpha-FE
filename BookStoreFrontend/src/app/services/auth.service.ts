@@ -29,7 +29,7 @@ export class AuthService {
 
   LogoutUser(){
     this.isLoggedIn=false;
-    sessionStorage.clear();
+    localStorage.setItem('token',"null");
     this.router.navigate(['home']);
   }
   
