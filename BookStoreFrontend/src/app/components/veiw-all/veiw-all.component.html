@@ -14,7 +14,6 @@
                 <h5>By {{ book.author }}</h5>
                 <p>Price: Rs.{{ book.mrp*(100-book.discount)/100 }}</p>
                 <div class="button-container">
-                    <!-- <button class="add-to-cart">Add to Cart</button> -->
                     <button class="add-to-cart" (click)="addToCart()" [innerText]="buttonText"></button>
                     <button (click)="bookDetail()" (click)="setCurrentBook(book)" class="buy-now">Buy Now</button>
                     <p-dialog [(visible)]="showbook" [style]="{ width: '40vw' }" [modal]="true"

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./update-book.component.css']
 })
 export class UpdateBookComponent {
-
 }
