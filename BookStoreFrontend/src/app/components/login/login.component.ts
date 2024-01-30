@@ -59,7 +59,7 @@ export class LoginComponent {
         response =>{
           // localStorage.setItem('token',respone.token);
           // const tok =localStorage.getItem('token')
-          console.log(response);
+          
           if(response.token != null){
 
             localStorage.setItem('token',response.token);
@@ -67,6 +67,8 @@ export class LoginComponent {
 
             this.loginUserService.setUser(user);
 
+            localStorage.setItem('user',JSON.stringify(user));
+            console.log(this.loginUserService.getUser());
           this.router.navigate(['/home']);
           }else{
             this.msgService.add({ severity: 'error', summary: 'error', detail: 'wrong password or email' });

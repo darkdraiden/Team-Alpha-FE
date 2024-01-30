@@ -1,15 +1,18 @@
 // cart.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { cart } from '../../interfaces/books'
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginUserServiceService } from 'src/app/login-user-service.service';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
+@Injectable({
+  providedIn: 'root'
+})
 export class CartComponent implements OnInit {
-  // cartItems: cart[] = [];
+  cartItems: cart[] = [];
 
   constructor(private httpClient:HttpClient,private loginUserService:LoginUserServiceService) { }
 
@@ -18,10 +21,17 @@ export class CartComponent implements OnInit {
     this.fetchCart();
   }
 
+  
   fetchCart() {
     const user=this.loginUserService.getUser();
     
-    this.httpClient.get<any>(`http://localhost:8080/api/v1/cart/${user.userId}`)
+    const token=localStorage.getItem('token');
+    
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    this.httpClient.get<any>(`http://localhost:8080/api/v1/cart/${user.userId}`,{headers})
       .subscribe(response => {
         console.log(response);
         this.cartItems = response.data;
@@ -29,17 +39,7 @@ export class CartComponent implements OnInit {
       
   }
 
-//   cartItems: any[] = [
-//     { bookName: 'Book 1', price: 10, quantity: 1 },
-//     { bookName: 'Book 2', price: 15, quantity: 2 },
-//     { bookName: 'Book 3', price: 20, quantity: 1 }
-// ];
 
-  cartItems: any[] = [
-    { bookName: 'Book 1', price: 10, quantity: 1 },
-    { bookName: 'Book 2', price: 15, quantity: 2 },
-    { bookName: 'Book 3', price: 20, quantity: 1 }
-];
 
 getTotalPrice(): number {
     return this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);

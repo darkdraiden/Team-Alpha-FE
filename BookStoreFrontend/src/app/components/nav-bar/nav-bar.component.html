@@ -43,7 +43,9 @@
           [draggable]="false" [resizable]="false">
           <app-orders></app-orders>
         </p-dialog>
+        <a *ngIf="isUserAdmin" routerLink="/admin">Admin Panel</a>
         <a routerLink="view-profile" (click)="logout()">Log Out</a>
+        
       </div>
     </div>
   </div>

@@ -40,6 +40,7 @@ import { OrderFormComponent } from './components/order-form/order-form.component
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
 import { AddBookComponent } from './component/add-book/add-book.component';
 import { UpdateBookComponent } from './component/update-book/update-book.component';
+import { LoginUserServiceService } from './login-user-service.service';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,7 @@ CheckboxModule,
 FormsModule
     
   ],
-  providers: [MessageService],
+  providers: [MessageService,LoginUserServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
